@@ -1,0 +1,147 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/TE2003B/Procesador-8-Bits-VHDL/Procesador/simulation/qsim
+Ehard_block
+Z1 w1716784589
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 b:4^GQG9SgzacjAmO=9`O0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 3g0@koWcWFU4ch:4ZJbzl1
+R0
+Z8 8Procesador.vho
+Z9 FProcesador.vho
+l0
+L34
+V8_BbEmGd;OHS6h@;gFc7W3
+!s100 ROH=D<N4CT6aCZ<37A[_?0
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1716784589
+!i10b 1
+Z12 !s108 1716784589.000000
+Z13 !s90 -work|work|Procesador.vho|
+Z14 !s107 Procesador.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 8_BbEmGd;OHS6h@;gFc7W3
+l75
+L53
+Vg=W`CQ>24lhYF71zFSkY43
+!s100 zW6ML5NVY?Ai`]`n2XhME3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Eprocesador
+Z17 w1716996575
+R3
+R7
+R2
+Z18 DPx6 altera 11 dffeas_pack 0 22 Dg`GWTC`^Q8GNSMPeo22;3
+R4
+R5
+R6
+Z19 DPx6 altera 28 altera_primitives_components 0 22 _LNC5n6B?5VN@W;M4Dg@k1
+R0
+R8
+R9
+l0
+L36
+VL2GGShHJkaVLdcF60ES<E0
+!s100 8<E5QcK2aE1Se1AB[KB^@3
+R10
+32
+Z20 !s110 1716996577
+!i10b 1
+Z21 !s108 1716996577.000000
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R3
+R7
+R2
+R18
+R4
+R5
+R6
+R19
+DEx4 work 10 procesador 0 22 L2GGShHJkaVLdcF60ES<E0
+l2500
+L75
+VogXN9HES75GaUAN2RaeI51
+!s100 RzV218Y[cIWUg0D]S2AVX1
+R10
+32
+R20
+!i10b 1
+R21
+R13
+R14
+!i113 1
+R15
+R16
+Eprocesador_vhd_vec_tst
+Z22 w1716996574
+R5
+R6
+R0
+Z23 8Procesador.vwf.vht
+Z24 FProcesador.vwf.vht
+l0
+L31
+VJ^B5Yg^MdWTi9_nNUe6S02
+!s100 ?d;:G7@oel42C^GKMCF`@2
+R10
+32
+R20
+!i10b 1
+R21
+Z25 !s90 -work|work|Procesador.vwf.vht|
+Z26 !s107 Procesador.vwf.vht|
+!i113 1
+R15
+R16
+Aprocesador_arch
+R5
+R6
+Z27 DEx4 work 22 procesador_vhd_vec_tst 0 22 J^B5Yg^MdWTi9_nNUe6S02
+l108
+L33
+Z28 V>4YQOfk0a[0gVZ_9ea=a>0
+Z29 !s100 b5GzGCcEe86^09YdI3I:H0
+R10
+32
+R20
+!i10b 1
+R21
+R25
+R26
+!i113 1
+R15
+R16

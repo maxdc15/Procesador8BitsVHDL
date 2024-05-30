@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/TE2003B/Procesador8BitsV2/ALU/RESTA8/simulation/qsim
+Eresta8
+Z1 w1715903902
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 b:4^GQG9SgzacjAmO=9`O0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 3g0@koWcWFU4ch:4ZJbzl1
+R0
+Z8 8RESTA8.vho
+Z9 FRESTA8.vho
+l0
+L34
+Vmz2:0<ao>@HKLKmNFE>9T0
+!s100 6WCk0PB7?G^K]]>7X1hS`1
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1715903908
+!i10b 1
+Z12 !s108 1715903907.000000
+Z13 !s90 -work|work|RESTA8.vho|
+Z14 !s107 RESTA8.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 6 resta8 0 22 mz2:0<ao>@HKLKmNFE>9T0
+l106
+L45
+VJMhM]X9f^o?F]ZTcL85nI1
+!s100 TlmTROWlnJkaZo7OCe4G51
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Eresta8_vhd_vec_tst
+Z17 w1715903900
+R5
+R6
+R0
+Z18 8RESTA8.vwf.vht
+Z19 FRESTA8.vwf.vht
+l0
+L31
+VHeLSZBfQL8CWWPh6<ieL43
+!s100 PT[580L_9iN2AlF_[:3b11
+R10
+32
+R11
+!i10b 1
+Z20 !s108 1715903908.000000
+Z21 !s90 -work|work|RESTA8.vwf.vht|
+Z22 !s107 RESTA8.vwf.vht|
+!i113 1
+R15
+R16
+Aresta8_arch
+R5
+R6
+DEx4 work 18 resta8_vhd_vec_tst 0 22 HeLSZBfQL8CWWPh6<ieL43
+l52
+L33
+Vj02bcTL?PFIB^6mRfQ7lf2
+!s100 a[OijIR1]bHUniH6jENHT2
+R10
+32
+R11
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R15
+R16

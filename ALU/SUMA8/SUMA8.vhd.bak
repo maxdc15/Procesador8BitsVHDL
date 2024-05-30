@@ -1,0 +1,104 @@
+-- Sumador de 8 bits
+-- Maximiliano De La Cruz Lima	A01798048
+-- TE2003B
+
+-- Librerías
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- Descripción de la entidad
+entity SUMA is
+    port (
+        A, B        : in  std_logic_vector(7 downto 0);
+        Cin         : in  std_logic;
+        S           : out std_logic_vector(7 downto 0);
+        Cout        : out std_logic;
+        OverFlow    : out std_logic
+    );
+end entity;
+
+-- Architecture description
+architecture RTL of Sumador8 is
+    component FA is
+        port (
+            A, B, Cin  : in  std_logic;
+            Sum, Cout  : out std_logic
+        );
+    end component;
+
+    signal carry : std_logic_vector(0 to 8);  -- Include an extra bit for the final carry out
+
+begin
+    -- Initialize carry in to the first full adder
+    carry(0) <= Cin;
+
+    -- Manual chaining of full adders
+    FA_inst0 : FA port map (
+        A    => A(0),
+        B    => B(0),
+        Cin  => carry(0),
+        Sum  => S(0),
+        Cout => carry(1)
+    );
+
+    FA_inst1 : FA port map (
+        A    => A(1),
+        B    => B(1),
+        Cin  => carry(1),
+        Sum  => S(1),
+        Cout => carry(2)
+    );
+
+    FA_inst2 : FA port map (
+        A    => A(2),
+        B    => B(2),
+        Cin  => carry(2),
+        Sum  => S(2),
+        Cout => carry(3)
+    );
+
+    FA_inst3 : FA port map (
+        A    => A(3),
+        B    => B(3),
+        Cin  => carry(3),
+        Sum  => S(3),
+        Cout => carry(4)
+    );
+
+    FA_inst4 : FA port map (
+        A    => A(4),
+        B    => B(4),
+        Cin  => carry(4),
+        Sum  => S(4),
+        Cout => carry(5)
+    );
+
+    FA_inst5 : FA port map (
+        A    => A(5),
+        B    => B(5),
+        Cin  => carry(5),
+        Sum  => S(5),
+        Cout => carry(6)
+    );
+
+    FA_inst6 : FA port map (
+        A    => A(6),
+        B    => B(6),
+        Cin  => carry(6),
+        Sum  => S(6),
+        Cout => carry(7)
+    );
+
+    FA_inst7 : FA port map (
+        A    => A(7),
+        B    => B(7),
+        Cin  => carry(7),
+        Sum  => S(7),
+        Cout => carry(8)
+    );
+
+    -- Set output carry and overflow
+    Cout <= carry(8);
+    OverFlow <= carry(7) XOR carry(8);
+
+end architecture;

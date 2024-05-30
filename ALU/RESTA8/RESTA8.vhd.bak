@@ -1,0 +1,101 @@
+-- 8-bit Subtractor
+-- Library
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- Entity description
+entity Resta8 is
+    port (
+        A, B        : in  std_logic_vector(7 downto 0);
+        Bin         : in  std_logic;
+        D           : out std_logic_vector(7 downto 0);
+        Bout        : out std_logic;
+        OverFlow    : out std_logic
+			);
+end entity;
+
+-- Architecture description
+architecture RTL of Resta8 is
+    component FS is
+        port (
+            A, B, Bin  : in  std_logic;
+            D, Bout    : out std_logic
+        );
+    end component;
+
+    signal borrow : std_logic_vector(0 to 8);  -- Include an extra bit for the final borrow out
+
+begin
+    -- Initialize borrow in to the first full subtractor
+    borrow(0) <= Bin;
+
+    -- Manual chaining of full subtractors
+    FS_inst0 : FS port map (
+        A    => A(0),
+        B    => B(0),
+        Bin  => borrow(0),
+        D    => D(0),
+        Bout => borrow(1)
+    );
+
+    FS_inst1 : FS port map (
+        A    => A(1),
+        B    => B(1),
+        Bin  => borrow(1),
+        D    => D(1),
+        Bout => borrow(2)
+    );
+
+    FS_inst2 : FS port map (
+        A    => A(2),
+        B    => B(2),
+        Bin  => borrow(2),
+        D    => D(2),
+        Bout => borrow(3)
+    );
+
+    FS_inst3 : FS port map (
+        A    => A(3),
+        B    => B(3),
+        Bin  => borrow(3),
+        D    => D(3),
+        Bout => borrow(4)
+    );
+
+    FS_inst4 : FS port map (
+        A    => A(4),
+        B    => B(4),
+        Bin  => borrow(4),
+        D    => D(4),
+        Bout => borrow(5)
+    );
+
+    FS_inst5 : FS port map (
+        A    => A(5),
+        B    => B(5),
+        Bin  => borrow(5),
+        D    => D(5),
+        Bout => borrow(6)
+    );
+
+    FS_inst6 : FS port map (
+        A    => A(6),
+        B    => B(6),
+        Bin  => borrow(6),
+        D    => D(6),
+        Bout => borrow(7)
+    );
+
+    FS_inst7 : FS port map (
+        A    => A(7),
+        B    => B(7),
+        Bin  => borrow(7),
+        D    => D(7),
+        Bout => borrow(8)
+    );
+
+    -- Set output borrow and overflow
+    Bout <= borrow(8);
+    OverFlow <= borrow(7) XOR borrow(8);  -- Overflow condition for subtraction
+
+end architecture;

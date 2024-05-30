@@ -1,0 +1,530 @@
+Analysis & Synthesis report for DataPath8Bits
+Fri May 17 16:00:22 2024
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "PC:C3|Cont8Bits:Contador|HA:I7"
+ 12. Port Connectivity Checks: "PC:C3|Cont8Bits:Contador|HA:I0"
+ 13. Port Connectivity Checks: "ALU8BITS:C2|RESTA8:I5"
+ 14. Port Connectivity Checks: "ALU8BITS:C2|SUMA8:I4"
+ 15. Port Connectivity Checks: "ALU8BITS:C2|RESTA8:I3"
+ 16. Port Connectivity Checks: "ALU8BITS:C2|SUMA8:I2"
+ 17. Port Connectivity Checks: "ALU8BITS:C2|RESTA8:I1"
+ 18. Port Connectivity Checks: "ALU8BITS:C2|SUMA8:I0"
+ 19. Post-Synthesis Netlist Statistics for Top Partition
+ 20. Elapsed Time Per Partition
+ 21. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri May 17 16:00:22 2024       ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                      ; DataPath8Bits                               ;
+; Top-level Entity Name              ; DataPath8Bits                               ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 211                                         ;
+;     Total combinational functions  ; 179                                         ;
+;     Dedicated logic registers      ; 44                                          ;
+; Total registers                    ; 44                                          ;
+; Total pins                         ; 101                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                            ; DataPath8Bits      ; DataPath8Bits      ;
+; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 12          ;
+; Maximum allowed            ; 6           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 6           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                      ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
+; ../Cont8Bits/Cont8Bits.vhd       ; yes             ; User VHDL File  ; C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/Cont8Bits/Cont8Bits.vhd         ;         ;
+; ../PC/PC.vhd                     ; yes             ; User VHDL File  ; C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/PC/PC.vhd                       ;         ;
+; ../Registros/Registros.vhd       ; yes             ; User VHDL File  ; C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/Registros/Registros.vhd         ;         ;
+; ../../ALU/ALU8BITS/ALU8BITS.vhd  ; yes             ; User VHDL File  ; C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd                ;         ;
+; ../../ALU/FA/FA.vhd              ; yes             ; User VHDL File  ; C:/TE2003B/Procesador-8-Bits-VHDL/ALU/FA/FA.vhd                            ;         ;
+; ../../ALU/FS/FS.vhd              ; yes             ; User VHDL File  ; C:/TE2003B/Procesador-8-Bits-VHDL/ALU/FS/FS.vhd                            ;         ;
+; ../../ALU/HA/HA.vhd              ; yes             ; User VHDL File  ; C:/TE2003B/Procesador-8-Bits-VHDL/ALU/HA/HA.vhd                            ;         ;
+; ../../ALU/HS/HS.vhd              ; yes             ; User VHDL File  ; C:/TE2003B/Procesador-8-Bits-VHDL/ALU/HS/HS.vhd                            ;         ;
+; ../../ALU/RESTA8/RESTA8.vhd      ; yes             ; User VHDL File  ; C:/TE2003B/Procesador-8-Bits-VHDL/ALU/RESTA8/RESTA8.vhd                    ;         ;
+; ../../ALU/SUMA8/SUMA8.vhd        ; yes             ; User VHDL File  ; C:/TE2003B/Procesador-8-Bits-VHDL/ALU/SUMA8/SUMA8.vhd                      ;         ;
+; DataPath8Bits.vhd                ; yes             ; User VHDL File  ; C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 211       ;
+;                                             ;           ;
+; Total combinational functions               ; 179       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 117       ;
+;     -- 3 input functions                    ; 47        ;
+;     -- <=2 input functions                  ; 15        ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 179       ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 44        ;
+;     -- Dedicated logic registers            ; 44        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 101       ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; CLK~input ;
+; Maximum fan-out                             ; 44        ;
+; Total fan-out                               ; 1002      ;
+; Average fan-out                             ; 2.36      ;
++---------------------------------------------+-----------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                 ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                ; Entity Name   ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------+---------------+--------------+
+; |DataPath8Bits             ; 179 (24)            ; 44 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 101  ; 0            ; 0          ; |DataPath8Bits                                     ; DataPath8Bits ; work         ;
+;    |ALU8BITS:C2|           ; 135 (105)           ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2                         ; ALU8BITS      ; work         ;
+;       |RESTA8:I1|          ; 11 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I1               ; RESTA8        ; work         ;
+;          |FS:FS1|          ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I1|FS:FS1        ; FS            ; work         ;
+;             |HS:HS1|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I1|FS:FS1|HS:HS1 ; HS            ; work         ;
+;          |FS:FS2|          ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I1|FS:FS2        ; FS            ; work         ;
+;             |HS:HS1|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I1|FS:FS2|HS:HS1 ; HS            ; work         ;
+;          |FS:FS4|          ; 4 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I1|FS:FS4        ; FS            ; work         ;
+;             |HS:HS0|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I1|FS:FS4|HS:HS0 ; HS            ; work         ;
+;             |HS:HS1|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I1|FS:FS4|HS:HS1 ; HS            ; work         ;
+;          |FS:FS5|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I1|FS:FS5        ; FS            ; work         ;
+;          |FS:FS6|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I1|FS:FS6        ; FS            ; work         ;
+;          |FS:FS7|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I1|FS:FS7        ; FS            ; work         ;
+;       |RESTA8:I3|          ; 6 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I3               ; RESTA8        ; work         ;
+;          |FS:FS1|          ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I3|FS:FS1        ; FS            ; work         ;
+;             |HS:HS1|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I3|FS:FS1|HS:HS1 ; HS            ; work         ;
+;          |FS:FS2|          ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I3|FS:FS2        ; FS            ; work         ;
+;             |HS:HS1|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I3|FS:FS2|HS:HS1 ; HS            ; work         ;
+;          |FS:FS3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I3|FS:FS3        ; FS            ; work         ;
+;             |HS:HS1|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I3|FS:FS3|HS:HS1 ; HS            ; work         ;
+;          |FS:FS5|          ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I3|FS:FS5        ; FS            ; work         ;
+;             |HS:HS1|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I3|FS:FS5|HS:HS1 ; HS            ; work         ;
+;          |FS:FS6|          ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I3|FS:FS6        ; FS            ; work         ;
+;             |HS:HS1|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|RESTA8:I3|FS:FS6|HS:HS1 ; HS            ; work         ;
+;       |SUMA8:I0|           ; 7 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|SUMA8:I0                ; SUMA8         ; work         ;
+;          |FA:FA1|          ; 2 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|SUMA8:I0|FA:FA1         ; FA            ; work         ;
+;             |HA:HA1|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|SUMA8:I0|FA:FA1|HA:HA1  ; HA            ; work         ;
+;          |FA:FA2|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|SUMA8:I0|FA:FA2         ; FA            ; work         ;
+;          |FA:FA3|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|SUMA8:I0|FA:FA3         ; FA            ; work         ;
+;          |FA:FA4|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|SUMA8:I0|FA:FA4         ; FA            ; work         ;
+;          |FA:FA5|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|SUMA8:I0|FA:FA5         ; FA            ; work         ;
+;          |FA:FA6|          ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|SUMA8:I0|FA:FA6         ; FA            ; work         ;
+;       |SUMA8:I2|           ; 6 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|SUMA8:I2                ; SUMA8         ; work         ;
+;          |FA:FA2|          ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|SUMA8:I2|FA:FA2         ; FA            ; work         ;
+;             |HA:HA1|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|SUMA8:I2|FA:FA2|HA:HA1  ; HA            ; work         ;
+;          |FA:FA3|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|SUMA8:I2|FA:FA3         ; FA            ; work         ;
+;             |HA:HA1|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|SUMA8:I2|FA:FA3|HA:HA1  ; HA            ; work         ;
+;          |FA:FA5|          ; 1 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|SUMA8:I2|FA:FA5         ; FA            ; work         ;
+;             |HA:HA1|       ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|SUMA8:I2|FA:FA5|HA:HA1  ; HA            ; work         ;
+;          |FA:FA6|          ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|SUMA8:I2|FA:FA6         ; FA            ; work         ;
+;             |HA:HA1|       ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|ALU8BITS:C2|SUMA8:I2|FA:FA6|HA:HA1  ; HA            ; work         ;
+;    |PC:C3|                 ; 19 (10)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|PC:C3                               ; PC            ; work         ;
+;       |Cont8Bits:Contador| ; 9 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|PC:C3|Cont8Bits:Contador            ; Cont8Bits     ; work         ;
+;          |HA:I1|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|PC:C3|Cont8Bits:Contador|HA:I1      ; HA            ; work         ;
+;          |HA:I2|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|PC:C3|Cont8Bits:Contador|HA:I2      ; HA            ; work         ;
+;          |HA:I3|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|PC:C3|Cont8Bits:Contador|HA:I3      ; HA            ; work         ;
+;          |HA:I4|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|PC:C3|Cont8Bits:Contador|HA:I4      ; HA            ; work         ;
+;          |HA:I5|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|PC:C3|Cont8Bits:Contador|HA:I5      ; HA            ; work         ;
+;          |HA:I6|           ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|PC:C3|Cont8Bits:Contador|HA:I6      ; HA            ; work         ;
+;          |HA:I7|           ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|PC:C3|Cont8Bits:Contador|HA:I7      ; HA            ; work         ;
+;    |Registros:C1|          ; 1 (1)               ; 36 (36)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DataPath8Bits|Registros:C1                        ; Registros     ; work         ;
++----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++----------------------------------------------------+----------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal  ; Free of Timing Hazards ;
++----------------------------------------------------+----------------------+------------------------+
+; ALU8BITS:C2|Flags[0]                               ; VCC                  ; yes                    ;
+; ALU8BITS:C2|Flags[1]                               ; ALU8BITS:C2|Flags[1] ; yes                    ;
+; ALU8BITS:C2|Flags[3]                               ; ALU8BITS:C2|Flags[3] ; yes                    ;
+; Number of user-specified and inferred latches = 3  ;                      ;                        ;
++----------------------------------------------------+----------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 44    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 8     ;
+; Number of registers using Asynchronous Clear ; 44    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 44    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DataPath8Bits|PC:C3|cuenta[7]  ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |DataPath8Bits|Mux6             ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; No         ; |DataPath8Bits|Mux10            ;
+; 256:1              ; 7 bits    ; 1190 LEs      ; 56 LEs               ; 1134 LEs               ; No         ; |DataPath8Bits|ALU8BITS:C2|Mux5 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "PC:C3|Cont8Bits:Contador|HA:I7"                                                     ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------+
+; Port Connectivity Checks: "PC:C3|Cont8Bits:Contador|HA:I0" ;
++------+-------+----------+----------------------------------+
+; Port ; Type  ; Severity ; Details                          ;
++------+-------+----------+----------------------------------+
+; b    ; Input ; Info     ; Stuck at VCC                     ;
++------+-------+----------+----------------------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "ALU8BITS:C2|RESTA8:I5" ;
++---------+-------+----------+----------------------+
+; Port    ; Type  ; Severity ; Details              ;
++---------+-------+----------+----------------------+
+; b[7..1] ; Input ; Info     ; Stuck at GND         ;
+; b[0]    ; Input ; Info     ; Stuck at VCC         ;
+; bin     ; Input ; Info     ; Stuck at GND         ;
++---------+-------+----------+----------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "ALU8BITS:C2|SUMA8:I4" ;
++---------+-------+----------+---------------------+
+; Port    ; Type  ; Severity ; Details             ;
++---------+-------+----------+---------------------+
+; b[7..1] ; Input ; Info     ; Stuck at GND        ;
+; b[0]    ; Input ; Info     ; Stuck at VCC        ;
+; cin     ; Input ; Info     ; Stuck at GND        ;
++---------+-------+----------+---------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "ALU8BITS:C2|RESTA8:I3" ;
++---------+-------+----------+----------------------+
+; Port    ; Type  ; Severity ; Details              ;
++---------+-------+----------+----------------------+
+; b[7..1] ; Input ; Info     ; Stuck at GND         ;
+; b[0]    ; Input ; Info     ; Stuck at VCC         ;
+; bin     ; Input ; Info     ; Stuck at GND         ;
++---------+-------+----------+----------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "ALU8BITS:C2|SUMA8:I2" ;
++---------+-------+----------+---------------------+
+; Port    ; Type  ; Severity ; Details             ;
++---------+-------+----------+---------------------+
+; b[7..1] ; Input ; Info     ; Stuck at GND        ;
+; b[0]    ; Input ; Info     ; Stuck at VCC        ;
+; cin     ; Input ; Info     ; Stuck at GND        ;
++---------+-------+----------+---------------------+
+
+
++---------------------------------------------------+
+; Port Connectivity Checks: "ALU8BITS:C2|RESTA8:I1" ;
++------+-------+----------+-------------------------+
+; Port ; Type  ; Severity ; Details                 ;
++------+-------+----------+-------------------------+
+; bin  ; Input ; Info     ; Stuck at GND            ;
++------+-------+----------+-------------------------+
+
+
++--------------------------------------------------+
+; Port Connectivity Checks: "ALU8BITS:C2|SUMA8:I0" ;
++------+-------+----------+------------------------+
+; Port ; Type  ; Severity ; Details                ;
++------+-------+----------+------------------------+
+; cin  ; Input ; Info     ; Stuck at GND           ;
++------+-------+----------+------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 101                         ;
+; cycloneiii_ff         ; 44                          ;
+;     ENA CLR           ; 36                          ;
+;     ENA CLR SLD       ; 8                           ;
+; cycloneiii_lcell_comb ; 180                         ;
+;     normal            ; 180                         ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 13                          ;
+;         3 data inputs ; 47                          ;
+;         4 data inputs ; 117                         ;
+;                       ;                             ;
+; Max LUT depth         ; 15.00                       ;
+; Average LUT depth     ; 9.17                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Fri May 17 16:00:12 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DataPath8Bits -c DataPath8Bits
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/datapath/cont8bits/cont8bits.vhd
+    Info (12022): Found design unit 1: CONt8Bits-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/Cont8Bits/Cont8Bits.vhd Line: 18
+    Info (12023): Found entity 1: Cont8Bits File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/Cont8Bits/Cont8Bits.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/datapath/pc/pc.vhd
+    Info (12022): Found design unit 1: PC-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/PC/PC.vhd Line: 22
+    Info (12023): Found entity 1: PC File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/PC/PC.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/datapath/registros/registros.vhd
+    Info (12022): Found design unit 1: Registros-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/Registros/Registros.vhd Line: 29
+    Info (12023): Found entity 1: Registros File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/Registros/Registros.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/alu/alu8bits/alu8bits.vhd
+    Info (12022): Found design unit 1: ALU8BITS-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 20
+    Info (12023): Found entity 1: ALU8BITS File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/alu/fa/fa.vhd
+    Info (12022): Found design unit 1: FA-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/FA/FA.vhd Line: 18
+    Info (12023): Found entity 1: FA File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/FA/FA.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/alu/fs/fs.vhd
+    Info (12022): Found design unit 1: FS-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/FS/FS.vhd Line: 18
+    Info (12023): Found entity 1: FS File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/FS/FS.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/alu/ha/ha.vhd
+    Info (12022): Found design unit 1: HA-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/HA/HA.vhd Line: 18
+    Info (12023): Found entity 1: HA File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/HA/HA.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/alu/hs/hs.vhd
+    Info (12022): Found design unit 1: HS-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/HS/HS.vhd Line: 18
+    Info (12023): Found entity 1: HS File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/HS/HS.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/alu/resta8/resta8.vhd
+    Info (12022): Found design unit 1: RESTA8-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/RESTA8/RESTA8.vhd Line: 21
+    Info (12023): Found entity 1: RESTA8 File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/RESTA8/RESTA8.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/alu/suma8/suma8.vhd
+    Info (12022): Found design unit 1: SUMA8-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/SUMA8/SUMA8.vhd Line: 21
+    Info (12023): Found entity 1: SUMA8 File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/SUMA8/SUMA8.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file datapath8bits.vhd
+    Info (12022): Found design unit 1: DataPath8Bits-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 23
+    Info (12023): Found entity 1: DataPath8Bits File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 10
+Info (12127): Elaborating entity "DataPath8Bits" for the top level hierarchy
+Info (12128): Elaborating entity "Registros" for hierarchy "Registros:C1" File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 74
+Info (12128): Elaborating entity "ALU8BITS" for hierarchy "ALU8BITS:C2" File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 75
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(92): signal "Carry" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 92
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(94): signal "CoIncA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 94
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(96): signal "CoIncB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 96
+Warning (10631): VHDL Process Statement warning at ALU8BITS.vhd(87): inferring latch(es) for signal or variable "Flags", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 87
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(108): signal "OverAaddB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 108
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(110): signal "OverAsubB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 110
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(112): signal "OverIncA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 112
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(114): signal "OverIncB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 114
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(116): signal "OverDecA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 116
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(118): signal "OverDecB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 118
+Warning (10631): VHDL Process Statement warning at ALU8BITS.vhd(103): inferring latch(es) for signal or variable "Flags", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 103
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(132): signal "Borrow" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 132
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(134): signal "BoDecA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 134
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(136): signal "BoDecB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 136
+Warning (10631): VHDL Process Statement warning at ALU8BITS.vhd(127): inferring latch(es) for signal or variable "Flags", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 127
+Info (10041): Inferred latch for "Flags[3]" at ALU8BITS.vhd(127) File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 127
+Info (10041): Inferred latch for "Flags[1]" at ALU8BITS.vhd(103) File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 103
+Info (10041): Inferred latch for "Flags[0]" at ALU8BITS.vhd(87) File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 87
+Info (12128): Elaborating entity "SUMA8" for hierarchy "ALU8BITS:C2|SUMA8:I0" File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 56
+Info (12128): Elaborating entity "FA" for hierarchy "ALU8BITS:C2|SUMA8:I0|FA:FA0" File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/SUMA8/SUMA8.vhd Line: 37
+Info (12128): Elaborating entity "HA" for hierarchy "ALU8BITS:C2|SUMA8:I0|FA:FA0|HA:HA0" File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/FA/FA.vhd Line: 34
+Info (12128): Elaborating entity "RESTA8" for hierarchy "ALU8BITS:C2|RESTA8:I1" File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 57
+Info (12128): Elaborating entity "FS" for hierarchy "ALU8BITS:C2|RESTA8:I1|FS:FS0" File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/RESTA8/RESTA8.vhd Line: 38
+Info (12128): Elaborating entity "HS" for hierarchy "ALU8BITS:C2|RESTA8:I1|FS:FS0|HS:HS0" File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/FS/FS.vhd Line: 33
+Info (12128): Elaborating entity "PC" for hierarchy "PC:C3" File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 76
+Warning (10036): Verilog HDL or VHDL warning at PC.vhd(36): object "inc_signal" assigned a value but never read File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/PC/PC.vhd Line: 36
+Info (12128): Elaborating entity "Cont8Bits" for hierarchy "PC:C3|Cont8Bits:Contador" File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/PC/PC.vhd Line: 51
+Warning (13012): Latch ALU8BITS:C2|Flags[1] has unsafe behavior File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 103
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Sel[0] File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 15
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal ALU_Sel[0] File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 15
+Warning (13012): Latch ALU8BITS:C2|Flags[3] has unsafe behavior File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 127
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal ALU_Sel[0] File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 15
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal ALU_Sel[0] File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 15
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 323 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 29 input pins
+    Info (21059): Implemented 72 output pins
+    Info (21061): Implemented 222 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 23 warnings
+    Info: Peak virtual memory: 4809 megabytes
+    Info: Processing ended: Fri May 17 16:00:22 2024
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:20
+
+

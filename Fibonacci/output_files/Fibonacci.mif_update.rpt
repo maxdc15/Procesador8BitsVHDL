@@ -1,0 +1,75 @@
+MIF/HEX Update report for Fibonacci
+Sun May 26 21:21:43 2024
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. MIF/HEX Update Summary
+  3. MIF/HEX Update Processed Files
+  4. MIF/HEX Update Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++---------------------------------------------------------------+
+; MIF/HEX Update Summary                                        ;
++-----------------------+---------------------------------------+
+; MIF/HEX Update Status ; Successful - Sun May 26 21:21:43 2024 ;
+; Revision Name         ; Fibonacci                             ;
+; Top-level Entity Name ; Fibonacci                             ;
+; Family                ; MAX 10                                ;
+; Device                ; 10M50DAF484C7G                        ;
++-----------------------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------+
+; MIF/HEX Update Processed Files                                                           ;
++------------------------------------------------------------------------------------------+
+; File Name                                                                                ;
++------------------------------------------------------------------------------------------+
+; C:/TE2003B/Procesador-8-Bits-VHDL/Fibonacci/db/fibonacci.ram0_mem_datos_b0539313.hdl.mif ;
++------------------------------------------------------------------------------------------+
+
+
++-------------------------+
+; MIF/HEX Update Messages ;
++-------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime MIF/HEX Update
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Sun May 26 21:21:42 2024
+Info: Command: quartus_cdb Fibonacci -c Fibonacci --update_mif
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Warning (113028): 32 out of 128 addresses are uninitialized. The Quartus Prime software will initialize them to "0". There are 1 warnings found, and 1 warnings are reported. File: C:/TE2003B/Procesador-8-Bits-VHDL/Fibonacci/db/fibonacci.ram0_mem_datos_b0539313.hdl.mif Line: 1
+    Warning (113027): Addresses ranging from 96 to 127 are not initialized File: C:/TE2003B/Procesador-8-Bits-VHDL/Fibonacci/db/fibonacci.ram0_mem_datos_b0539313.hdl.mif Line: 1
+Critical Warning (127004): Memory depth (96) in the design file differs from memory depth (128) in the Memory Initialization File "C:/TE2003B/Procesador-8-Bits-VHDL/Fibonacci/db/fibonacci.ram0_mem_datos_b0539313.hdl.mif" -- truncated remaining initial content value to fit RAM
+Info (39024): Processed the following Memory Initialization File(s)
+    Info (39025): Processed Memory Initialization File C:/TE2003B/Procesador-8-Bits-VHDL/Fibonacci/db/fibonacci.ram0_mem_datos_b0539313.hdl.mif File: C:/TE2003B/Procesador-8-Bits-VHDL/Fibonacci/db/fibonacci.ram0_mem_datos_b0539313.hdl.mif Line: 0
+Info: Quartus Prime MIF/HEX Update was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4722 megabytes
+    Info: Processing ended: Sun May 26 21:21:43 2024
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+

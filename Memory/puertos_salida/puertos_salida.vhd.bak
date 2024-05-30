@@ -1,0 +1,19 @@
+-- Puertos de salidas para un módulo de memoria
+-- Maximiliano De La Cruz Lima	A01798048
+-- TE2003B
+
+-- Librerías
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+-- Descripción de la entidad
+entity puertos_salida is
+	port (CLK,RST,WR	:	in std_logic;
+			address		:	in	std_logic_vector(3 downto 0);
+			data_in		:);
+			
+end entity;
+
+-- Descripción de la arquitectura

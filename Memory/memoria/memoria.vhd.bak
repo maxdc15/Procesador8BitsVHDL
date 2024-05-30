@@ -1,0 +1,7 @@
+-- Memoria del procesador de 8 bits
+-- Maximiliano De La Cruz Lima	A01798048
+-- TE2003B
+
+-- Librerías
+library ieee;
+use ieee.std_logic_1164.all;

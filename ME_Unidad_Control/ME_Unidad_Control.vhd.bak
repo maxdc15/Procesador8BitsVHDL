@@ -1,0 +1,848 @@
+-- Maquina de estados: Unidad de Control
+-- Maximiliano De La Cruz Lima	A01798048
+-- TE2003B
+
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity ME_Unidad_Control is 
+port (Start,CLK,RST      			 		  : in std_logic;
+		IR                                    : in std_logic_vector(7 downto 0);
+		CCR_Result                            : in std_logic_vector(3 downto 0);
+		IR_Load,MAR_Load,PC_Load,PC_Inc,A_Load: out std_logic;
+		B_Load, CCR_Load,wr                   : out std_logic;
+		Bus2_Sel, Bus1_Sel                    : out std_logic_vector(1 downto 0);
+		ALU_Select                            : out std_logic_vector(7 downto 0));
+end entity;
+
+architecture RTL of ME_Unidad_Control is 
+	type ESTADO is (IDLE,Fetch1, Fetch2, Decode, 
+						 Load_inmA1,Load_inmA2,Load_inmA3,Load_inmB,
+						 Load_DIR_A,Load_DIR_A2,Load_DIR_A3,Load_DIR_A4,Load_DIR_A5, Load_DIR_B,
+						 STOREA,STOREA2,STOREA3,STOREA4,STOREB,
+						 JMP1,JMP2,JMP3,JCC1_N,JCC2,JCC3,JCC4,JCC1_NV,JCC1_NN,JCC1_Z,JCC1_V,JCC1_NC,JCC1_C,JCC1_NZ,
+						 ADD_AB,SUB_AB,AND_AB,OR_AB,XOR_AB,INC_A,INC_B,DEC_A,DEC_B,NOT_A,NOT_B);
+	signal EDO, FUT: ESTADO;
+	
+	begin
+
+P1: process(CLK)
+		begin
+			if RST = '1' then
+				EDO  <= IDLE;
+			elsif (CLK'event and CLK ='1')then
+				EDO  <= FUT;
+			end if;
+	end process;
+	
+
+											
+											
+P2 : process(CLK, EDO, IR, CCR_Result)
+	begin 
+		case EDO is 
+		------Estados principales------
+			when  Idle => if (start ='1') then 
+									FUT <= Fetch1 ;
+								else 
+									FUT <= Idle;
+								end if;
+			when  Fetch1 => FUT <= Fetch2 ;
+			when 	Fetch2 => FUT <= Decode;
+
+			
+			
+									-----Load_in------
+			when  Decode    => if ((IR = x"86") or (IR = x"87")) then
+					FUT <= Load_inmA1 ;
+									------Load_direccion------
+								 elsif ((IR = x"88") or (IR = x"89")) then
+					FUT <= Load_DIR_A ;
+									------Store------
+								 elsif ((IR = x"96") or (IR = x"97")) then
+					FUT <= STOREA;
+					
+					
+									------salto incondicional-------
+								 elsif (IR = x"20") then
+					FUT <= JMP1 ;
+									------Salto condicional cuando N=1------
+								 elsif (IR = x"21" and CCR_Result(3)='1') then 
+					FUT <= JCC1_N ;
+									------Salto condicional cuadno N=0------
+								 elsif (IR = x"22" and CCR_Result(3)='0') then 
+					FUT <= JCC1_NN ;
+									------Salto condicional cuando Z=1
+								 elsif (IR = x"23" and CCR_Result(2)='1') then 
+					FUT <= JCC1_Z ;
+									------Salto condicional cuando Z=0
+								 elsif (IR = x"24" and CCR_Result(2)='0') then 
+					FUT <= JCC1_NZ ;
+									------Salto condicional cuando V=1-----
+								 elsif (IR = x"25" and CCR_Result(1)='1') then 
+					FUT <= JCC1_NV ;
+									 -------Salto condicional cuando V=0
+								 elsif (IR = x"26" and CCR_Result(1)='0') then 
+					FUT <= JCC1_V ;
+									 ------Salto condicional cuando C=1
+								elsif (IR = x"27" and CCR_Result(0)='1') then 
+					FUT <= JCC1_NC ;
+									 -----Salto condicional C=0-----
+								 elsif (IR = x"28" and CCR_Result(0)='0') then 
+					FUT <= JCC1_C ;
+								 elsif (IR = x"28" or IR = x"27" or IR = x"26" or IR = x"25" or IR = x"24" or IR = x"23" or IR = x"22" or IR = x"21") then--Esto es del JUMP_CONDICION_C=0
+					FUT <= JCC4;
+									 
+									 
+								--------Operaciones aritmeticas logicas--------
+								----Suma A+B----
+								 elsif (IR = x"40") then
+										FUT <= ADD_AB;
+								----resta A-B----
+								 elsif (IR = x"41") then
+										FUT <= SUB_AB;
+								----A and B	-----
+								 elsif (IR = x"42") then
+										FUT <= AND_AB;
+								----A or B ------
+								 elsif (IR = x"43") then
+										FUT <= OR_AB;
+								----A xor B -----
+								 elsif (IR = x"44") then
+										FUT <= XOR_AB;
+								----incremento en A -----
+								 elsif (IR = x"45") then
+										FUT <= INC_A;
+								----incremento en B -----
+								 elsif (IR = x"46") then
+										FUT <= INC_B;
+								----decremento en A ------	
+								 elsif (IR = x"47") then
+										FUT <= DEC_A;
+								----decremento en B ------
+								 elsif (IR = x"48") then
+										FUT <= DEC_B;
+								-----not en A ----
+					          elsif (IR = x"50") then
+										FUT <= NOT_A;
+								-----not en B -----
+								 elsif (IR = x"51") then
+										FUT <= NOT_B;
+								 else	
+										FUT <= Decode;
+			end if;
+			----suma de A + B-----
+			when  ADD_AB => 
+					FUT <= IDLE;
+			
+			-----resta de A-B ------
+			when  SUB_AB => 
+					FUT <= IDLE;
+			
+			----- A and B ------
+			when  AND_AB => 
+					FUT <= IDLE;
+			
+			---- A or B ------
+			when  OR_AB => 
+					FUT <= IDLE;
+			
+			---- A xor B -----
+			when  XOR_AB => 
+					FUT <= IDLE;
+			
+			----incremento en A ----
+			when  INC_A => 
+					FUT <= IDLE;
+			
+			-----incremento en B ----
+			when  INC_B => 
+					FUT <= IDLE;
+			
+			-----decremento en A -----
+			when  DEC_A => 
+					FUT <= IDLE;
+			
+			-----decremento en B -----
+			when  DEC_B => 
+					FUT <= IDLE;
+					
+			----- NOT A -----
+			when  NOT_A => 
+					FUT <= IDLE;
+			
+			-----NOT B -----
+			when  NOT_B => 
+					FUT <= IDLE;
+					
+------------------------------------------------------------------------------------------------------	
+			----- Load_inmA -----
+			when  Load_inmA1 => 
+					FUT <= Load_inmA2 ;
+			
+			
+			--Load_inmA o load_inmB		
+			when  Load_inmA2 =>
+				if (IR = x"86") then
+					FUT <= Load_inmA3 ;
+				else
+					FUT <= Load_inmB;
+				end if;
+			
+			-----Load_inmA -----
+			when  Load_inmA3 =>
+					FUT <= IDLE ; 
+			
+			-----Load_inmB -----
+			when  Load_inmB => 
+					FUT <= IDLE ;
+
+------------------------------------------------------------------------------------------------------
+
+			----- Load_DIR -----
+			when  Load_DIR_A =>
+					FUT <= Load_DIR_A2 ;
+			
+			----- Load_DIR ------
+			when  Load_DIR_A2 => 
+					FUT <= Load_DIR_A3 ;
+					
+			----- Load_DIR ------
+			when  Load_DIR_A3 => 
+					FUT <= Load_DIR_A4 ;
+			
+			---- Load_DIR A o Load_DIR_B -----
+			when  Load_DIR_A4 =>
+				if (IR = x"88") then
+					FUT <= Load_DIR_A5;
+				else
+					FUT <= Load_DIR_B;
+				end if;
+
+			----- Load_DIR_A -----
+			when  Load_DIR_A5 => 
+					FUT <= IDLE;
+	
+			---- Load_DIR_B -----
+			when  Load_DIR_B =>
+					FUT <= IDLE;
+
+------------------------------------------------------------------------------------------------------
+
+			---- STORE ----
+			when  STOREA =>
+					FUT <= STOREA2 ;
+
+			
+			when  STOREA2 =>
+					FUT <= STOREA3 ;
+
+			
+			when  STOREA3 => 
+				if (IR = x"96") then 
+					FUT <=  STOREA4;
+				else
+					FUT <=  STOREB;
+				end if;
+			
+			when  STOREA4 => 
+					FUT <= IDLE ;
+			
+			when  STOREB => 
+					FUT <= IDLE ;
+			
+------------------------------------------------------------------------------------------------------	
+			---- SALTO INCondicional 
+			when  JMP1 =>
+					FUT <= JMP2 ;
+				
+			when  JMP2 =>
+					FUT <= JMP3 ;
+				
+			when  JMP3 => 
+					FUT <= IDLE ;
+			
+------------------------------------------------------------------------------------------------------
+			---- Salto condicional cuando N = 1
+			when  JCC1_N => 
+					FUT <= JCC2 ;
+			
+			when  JCC2 => 
+					FUT <= JCC3 ;
+			
+			when  JCC3 => 
+					FUT <= IDLE ;       
+			
+			when  JCC4 => 
+					FUT <= IDLE ;
+------------------------------------------------------------------------------------------------------		
+			----Salto condicional cuando N=0 ----- 
+			when  JCC1_NN => 
+					FUT <= JCC2 ;
+------------------------------------------------------------------------------------------------------		
+			---- Salto condicional cuando V = 0
+			when  JCC1_NV =>
+					FUT <= JCC2 ;
+------------------------------------------------------------------------------------------------------	
+			----- Salto condicional cuando V = 1
+			when  JCC1_V => 
+					FUT <= JCC2 ;
+------------------------------------------------------------------------------------------------------
+			----- Salto condicional cuando Z = 0
+			when  JCC1_NZ => 
+					FUT <= JCC2 ;
+				
+------------------------------------------------------------------------------------------------------	
+			---- Salto condicional cuando Z = 1
+			when  JCC1_Z => 
+					FUT <= JCC2 ;
+------------------------------------------------------------------------------------------------------
+			----Salto condicional cuando C = 0
+			when  JCC1_NC => 
+					FUT <= JCC2 ;
+------------------------------------------------------------------------------------------------------										
+			----Esto es del JUMP_CONDICION_C=1
+			when  JCC1_C => 
+					FUT <= JCC2 ;		
+			when others => null;
+		end case;
+end process;	
+		
+P3: process(EDO)
+	begin 
+		case EDO is 
+			when Idle	 => IR_Load 	<= '0';
+								 MAR_Load	<= '1';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus2_Sel   <= "01";
+								 Bus1_Sel   <= "00";
+								 ALU_Select <=x"00";
+								 wr			<= '0';
+								 
+			when Fetch1	 => IR_Load 	<= '0';
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '1';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus2_Sel   <= "11";
+								 Bus1_Sel   <= "11";
+								 ALU_Select <=x"00";
+								 wr			<= '0';
+
+												 
+			when Fetch2	 => IR_Load 	<= '1';
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus2_Sel   <= "10";
+								 Bus1_Sel   <= "11";
+								 ALU_Select <=x"00";
+								 wr			<= '0';
+												
+			when Decode  => IR_Load 	<= null;
+								 MAR_Load	<= null;
+								 PC_Load	   <= null;
+								 PC_Inc     <= null;
+								 A_Load     <= null;
+								 B_Load     <= null;
+								 CCR_Load   <= null;
+								 Bus2_Sel   <= null;
+								 Bus1_Sel   <= null;
+								 ALU_Select <= null;
+								 wr			<= null;
+------------------------------------------------------------------------------------------------------			
+			---- A + B ----
+			when ADD_AB  => IR_Load 	<= '0';      
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '1';
+								 B_Load     <= '0';
+								 CCR_Load   <= '1';
+								 Bus2_Sel   <= "00";
+								 Bus1_Sel   <= "01";
+								 ALU_Select <=x"40";
+								 wr			<= '0';
+								 
+			 ----- A - B -----
+			when SUB_AB  => IR_Load 	<= '0';     
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '1';
+								 B_Load     <= '0';
+								 CCR_Load   <= '1';
+								 Bus2_Sel   <= "00";
+								 Bus1_Sel   <= "01";
+								 ALU_Select <=x"41";
+								 wr			<= '0';
+								 
+			------ A and B -----					 
+			when AND_AB  => IR_Load 	<= '0';      
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '1';
+								 B_Load     <= '0';
+								 CCR_Load   <= '1';
+								 Bus2_Sel   <= "00";
+								 Bus1_Sel   <= "01";
+								 ALU_Select <=x"42";
+								 wr			<= '0';
+								 
+			 ----- A or B ------				 
+			when OR_AB   => IR_Load 	<= '0';     
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '1';
+								 B_Load     <= '0';
+								 CCR_Load   <= '1';
+								 Bus2_Sel   <= "00";
+								 Bus1_Sel   <= "01";
+								 ALU_Select <=x"43";
+								 wr			<= '0';
+								 
+			 ----- A xor B ------
+			when XOR_AB   => IR_Load 	<= '0';     
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '1';
+								 B_Load     <= '0';
+								 CCR_Load   <= '1';
+								 Bus2_Sel   <= "00";
+								 Bus1_Sel   <= "01";
+								 ALU_Select <=x"44";
+								 wr			<= '0';
+								 
+			------ inc_A ------				 
+			when INC_A   => IR_Load 	<= '0';      
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '1';
+								 B_Load     <= '0';
+								 CCR_Load   <= '1';
+								 Bus2_Sel   <= "00";
+								 Bus1_Sel   <= "01";
+								 ALU_Select <=x"45";
+								 wr			<= '0';
+								 
+			----- inc_B	-----				 
+			when INC_B   => IR_Load 	<= '0';      
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '1';
+								 CCR_Load   <= '1';
+								 Bus2_Sel   <= "00";
+								 Bus1_Sel   <= "10";
+								 ALU_Select <=x"46";
+								 wr			<= '0';
+								 
+			---- dec_A -----				 
+			when DEC_A   => IR_Load 	<= '0';     
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '1';
+								 B_Load     <= '0';
+								 CCR_Load   <= '1';
+								 Bus2_Sel   <= "00";
+								 Bus1_Sel   <= "01";
+								 ALU_Select <=x"47";
+								 wr			<= '0';
+								 
+			------ dec_B -----				 
+			when DEC_B   => IR_Load 	<= '0';      
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '1';
+								 CCR_Load   <= '1';
+								 Bus2_Sel   <= "00";
+								 Bus1_Sel   <= "10";
+								 ALU_Select <=x"48";
+								 wr			<= '0';
+								 
+			----- not_A	-----			 
+			when NOT_A   => IR_Load 	<= '0';      
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '1';
+								 B_Load     <= '0';
+								 CCR_Load   <= '1';
+								 Bus2_Sel   <= "00";
+								 Bus1_Sel   <= "01";
+								 ALU_Select <=x"50";
+								 wr			<= '0';
+								 
+			------ not_B -----				 
+			when NOT_B   => IR_Load 	<= '0';      
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '1';
+								 CCR_Load   <= '1';
+								 Bus2_Sel   <= "00";
+								 Bus1_Sel   <= "10";
+								 ALU_Select <=x"51";
+------------------------------------------------------------------------------------------------------			
+		----- Load_inmA1 ----
+		when Load_inmA1 => IR_Load 	<= '0';  
+								 MAR_Load	<= '1';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus2_Sel   <= "01";
+								 Bus1_Sel   <= "00";
+								 wr			<= '0';
+								 
+		----- Load_inmA2 -----						 
+		when Load_inmA2 => IR_Load 	<= '0'; 
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '1';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus2_Sel   <= "11";
+								 Bus1_Sel   <= "11";
+								 wr			<= '0';
+								 
+		----- Load_inmA3 ----					 
+	   when Load_inmA3 => IR_Load 	<= '0'; 
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '1';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus2_Sel   <= "10"; --from mem
+								 Bus1_Sel   <= "11";
+								 wr			<= '0';
+								 
+		----- Load_inmB -----					 
+		when Load_inmB =>  IR_Load 	<= '0';
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '1';
+								 CCR_Load   <= '0';
+								 Bus2_Sel   <= "10"; --from mem
+								 Bus1_Sel   <= "11";
+								 wr			<= '0';
+------------------------------------------------------------------------------------------------------		
+	   ----- Load_DIR-----
+		when Load_DIR_A => IR_Load 	<= '0'; 
+								 MAR_Load	<= '1';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "00"; --PC
+								 Bus2_Sel   <= "01"; --Bus1
+								 wr			<= '0';
+								 
+		----- Load_DIR-----
+	  when Load_DIR_A2 => IR_Load 	<= '0'; 
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '1'; --incrementa PC
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "11";
+								 Bus2_Sel   <= "11";
+								 wr			<= '0';
+								 
+	----- Load_DIR -----							 
+	 when Load_DIR_A3  => IR_Load 	<= '0'; 
+								 MAR_Load	<= '1';
+								 PC_Load  	<= '0';
+								 PC_Inc  	<= '0';
+								 A_Load  	<= '0';
+								 B_Load  	<= '0';
+								 CCR_Load	<= '0';
+								 Bus1_Sel 	<= "11"; 
+								 Bus2_Sel 	<= "10"; --from mem
+								 wr			<= '0';
+								 
+	--estado para perder el tiempo							 
+	 when Load_DIR_A4  => IR_Load 	<= '0'; 
+								 MAR_Load	<= '0';
+								 PC_Load    <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus2_Sel   <= "11";
+								 Bus1_Sel   <= "11";
+								 wr			<= '0';
+								 
+	----- Load_DIRA -----							 
+	 when Load_DIR_A5  => IR_Load 	<= '0'; 
+								 MAR_Load	<= '0';
+								 PC_Load    <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '1';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "11";
+								 Bus2_Sel   <= "10"; --From mem
+								 wr			<= '0';
+								 
+	----- Load_DIRB ----						 
+	 when Load_DIR_B   => IR_Load 	<= '0'; 
+								 MAR_Load	<= '0';
+								 PC_Load    <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '1';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "11";
+								 Bus2_Sel   <= "10"; --From mem
+								 wr			<= '0';
+------------------------------------------------------------------------------------------------------								 
+		 ---- STORE ------- 
+		 when STOREA  =>	 IR_Load 	<= '0';  
+								 MAR_Load	<= '1';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "00"; --PC
+								 Bus2_Sel   <= "01"; --Bus1
+								 wr			<= '0';
+								
+		  when STOREA2 =>  IR_Load 	<= '0'; --Espera
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '1'; 
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "11";
+								 Bus2_Sel   <= "11";
+								 wr			<= '0';
+								
+		   when STOREA3 => IR_Load 	<= '0'; 
+								 MAR_Load	<= '1';
+								 PC_Load    <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "11"; 
+								 Bus2_Sel   <= "10"; --from mem
+								 wr			<= '0';
+							
+		  when STOREA4  => IR_Load 	<= '0'; 
+								 MAR_Load	<= '0';
+								 PC_Load    <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "01"; -- A
+								 Bus2_Sel   <= "11"; --nada
+								 wr			<= '1';
+								
+		   when STOREB  => IR_Load 	<= '0'; --Esto es stoREB
+								 MAR_Load	<= '0';
+								 PC_Load    <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "10"; -- B
+								 Bus2_Sel   <= "11"; --nada
+								 wr			<= '1';
+------------------------------------------------------------------------------------------------------								 
+			--Esto es salto incondicional
+			when JMP1  => 	 IR_Load 	<= '0';
+								 MAR_Load	<= '1';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "00"; --PC
+								 Bus2_Sel   <= "01"; --Bus1
+								 wr			<= '0';
+								 
+								 
+			when JMP2	=>  IR_Load 	<= '0'; --Espera
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0'; 
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "11";
+								 Bus2_Sel   <= "11";
+								 wr			<= '0';
+								 
+			when JMP3  =>   IR_Load 	<= '0';
+								 MAR_Load	<= '0';
+								 PC_Load    <= '1';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "11"; 
+								 Bus2_Sel   <= "10"; --from mem
+								 wr			<= '0';
+------------------------------------------------------------------------------------------------------								 
+			----- JUMP_CONDICION_N=1 ----					 
+			when JCC1_N  => IR_Load 	<= '0';
+								 MAR_Load	<= '1';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "00"; --PC
+								 Bus2_Sel   <= "01"; --Bus1
+								 wr			<= '0';
+								 
+			when JCC2	=>  IR_Load 	<= '0'; --Espera
+								 MAR_Load	<= '0';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0'; 
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "11";
+								 Bus2_Sel   <= "11";
+								 wr			<= '0';
+								 				 
+			when JCC3  =>   IR_Load 	<= '0';
+								 MAR_Load	<= '0';
+								 PC_Load    <= '1';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "11"; 
+								 Bus2_Sel   <= "10"; --from mem
+								 wr			<= '0';
+								 
+			when JCC4  =>   IR_Load 	<= '0';
+								 MAR_Load	<= '0';
+								 PC_Load    <= '0';
+								 PC_Inc     <= '1'; 
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "11"; 
+								 Bus2_Sel   <= "11"; 
+								 wr			<= '0';
+------------------------------------------------------------------------------------------------------								 
+			----- JUMP_CONDICION_N=0 -----
+			when JCC1_NN => IR_Load 	<= '0';
+								 MAR_Load	<= '1';
+								 PC_Load  	<= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "00"; --PC
+								 Bus2_Sel   <= "01"; --Bus1
+								 wr			<= '0';
+------------------------------------------------------------------------------------------------------								 
+			-----JUMP_CONDICION_V=0 ------
+			when JCC1_NV => IR_Load 	<= '0';
+								 MAR_Load	<= '1';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "00"; --PC
+								 Bus2_Sel   <= "01"; --Bus1
+								 wr			<= '0';
+------------------------------------------------------------------------------------------------------								 
+			----- JUMP_CONDICION_Z=0 -----
+			when JCC1_NZ => IR_Load 	<= '0';
+								 MAR_Load	<= '1';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "00"; --PC
+								 Bus2_Sel   <= "01"; --Bus1
+								 wr			<= '0';
+------------------------------------------------------------------------------------------------------								 
+			----- JUMP_CONDICION_Z=1 -----
+			when JCC1_Z  => IR_Load 	<= '0';
+								 MAR_Load	<= '1';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "00"; --PC
+								 Bus2_Sel   <= "01"; --Bus1
+								 wr			<= '0';
+------------------------------------------------------------------------------------------------------								 
+			----- JUMP_CONDICION_V=1 -----
+			when JCC1_V =>  IR_Load 	<= '0';
+								 MAR_Load	<= '1';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "00"; --PC
+								 Bus2_Sel   <= "01"; --Bus1
+								 wr			<= '0';
+------------------------------------------------------------------------------------------------------								 
+			------ JUMP_CONDICION_C=0 -------
+			when JCC1_NC => IR_Load 	<= '0';
+								 MAR_Load	<= '1';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "00"; --PC
+								 Bus2_Sel   <= "01"; --Bus1
+								 wr			<= '0';
+------------------------------------------------------------------------------------------------------								 
+			----- JUMP_CONDICION_C=1 -----
+			when JCC1_C  => IR_Load 	<= '0';
+								 MAR_Load	<= '1';
+								 PC_Load	   <= '0';
+								 PC_Inc     <= '0';
+								 A_Load     <= '0';
+								 B_Load     <= '0';
+								 CCR_Load   <= '0';
+								 Bus1_Sel   <= "00"; --PC
+								 Bus2_Sel   <= "01"; --Bus1
+								 wr			<= '0';
+			when others => null; 			
+		end case;
+end process;
+
+end architecture;

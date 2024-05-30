@@ -1,0 +1,96 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/TE2003B/Procesador-8-Bits-VHDL/Datapath/Cont8Bits/simulation/qsim
+Econt8bits
+Z1 w1715954843
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 b:4^GQG9SgzacjAmO=9`O0
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z7 DPx11 fiftyfivenm 22 fiftyfivenm_components 0 22 3g0@koWcWFU4ch:4ZJbzl1
+R0
+Z8 8Cont8Bits.vho
+Z9 FCont8Bits.vho
+l0
+L34
+V9SW1>`003c?bRC7EXgMkc3
+!s100 cV0FFK=0B04Rc8=QJ4?cU3
+Z10 OV;C;10.5b;63
+32
+Z11 !s110 1715954843
+!i10b 1
+Z12 !s108 1715954843.000000
+Z13 !s90 -work|work|Cont8Bits.vho|
+Z14 !s107 Cont8Bits.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 9 cont8bits 0 22 9SW1>`003c?bRC7EXgMkc3
+l80
+L41
+V_EB6Y<?dVS2_S];00<WJN0
+!s100 P23lN8CA_X`ZZcK?ZXbfB3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Econt8bits_vhd_vec_tst
+Z17 w1715954842
+R5
+R6
+R0
+Z18 8Cont8Bits.vwf.vht
+Z19 FCont8Bits.vwf.vht
+l0
+L31
+VBXNU]?FS4i>OQn[1>?b_?0
+!s100 iVJ_ASPU]o`VFU^]h_7F93
+R10
+32
+R11
+!i10b 1
+R12
+Z20 !s90 -work|work|Cont8Bits.vwf.vht|
+Z21 !s107 Cont8Bits.vwf.vht|
+!i113 1
+R15
+R16
+Acont8bits_arch
+R5
+R6
+Z22 DEx4 work 21 cont8bits_vhd_vec_tst 0 22 BXNU]?FS4i>OQn[1>?b_?0
+l44
+L33
+V=n8WP<ldGm]E`jbZD<W:@1
+!s100 E@MN6a`Z4J=Hdn^7DlZ9b1
+R10
+32
+R11
+!i10b 1
+R12
+R20
+R21
+!i113 1
+R15
+R16

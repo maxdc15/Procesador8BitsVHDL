@@ -1,0 +1,36 @@
+-- Full Subtractor
+-- Maximiliano De La Cruz Lima	A01798048
+-- TE2003B
+
+-- Librerías
+library ieee;
+use ieee.std_logic_1164.all;
+
+-- Descripción de la entidad
+entity FS is
+    port (
+        A, B, Bin  : in  std_logic;  -- Entradas
+        D, Bout    : out std_logic   -- Salidas: D es la diferencia, Bout es el borrow out
+    );
+end entity;
+
+-- Descripción de la arquitectura
+architecture RTL of FS is
+    -- Componentes utilizados
+    component HS is
+        port (
+            A, B       : in  std_logic;   -- Entradas
+            D, Bout    : out std_logic    -- Salidas
+        );
+    end component;
+    
+    -- Cables de interconexión
+    signal B1, D1 : std_logic;
+    
+    -- Descripción del circuito
+    begin
+        HS0 : HS port map (A, B,   D1, B1);
+        HS1 : HS port map (D1, Bin, D,  Bout);
+        
+        Bout <= B1 OR Bout;
+end architecture;

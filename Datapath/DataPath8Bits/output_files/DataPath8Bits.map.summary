@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Fri May 17 16:00:22 2024
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : DataPath8Bits
+Top-level Entity Name : DataPath8Bits
+Family : MAX 10
+Total logic elements : 211
+    Total combinational functions : 179
+    Dedicated logic registers : 44
+Total registers : 44
+Total pins : 101
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0
