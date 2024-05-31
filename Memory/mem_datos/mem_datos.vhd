@@ -21,7 +21,7 @@ architecture arc of mem_datos is
 	
 	type mem_dato is array (0 to 95) of std_logic_vector (7 downto 0);
 	signal RAM	:	mem_dato	:= (
-		x"0C", x"00", x"01", x"00",	-- 0x80:	(vacío)
+		x"0B", x"00", x"01", x"00",	-- 0x80:	(vacío)
 		x"00", x"00", x"00", x"00",	-- 0x84: (vacío)
 		x"00", x"00", x"00", x"00",	-- 0x88:	(vacío)
 		x"00", x"00", x"00", x"00",	-- 0x8C:	(vacío)

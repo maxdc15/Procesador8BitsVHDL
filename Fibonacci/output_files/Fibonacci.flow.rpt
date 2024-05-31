@@ -1,5 +1,5 @@
 Flow report for Fibonacci
-Thu May 30 14:10:29 2024
+Thu May 30 18:01:00 2024
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu May 30 14:10:29 2024       ;
+; Flow Status                        ; Successful - Thu May 30 18:01:00 2024       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Fibonacci                                   ;
 ; Top-level Entity Name              ; Fibonacci                                   ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/30/2024 14:09:17 ;
+; Start date & time ; 05/30/2024 18:00:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Fibonacci           ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 62619200865276.171709975709328         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 62619200865276.171711362616992         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                   ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                 ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -101,10 +101,10 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:24     ; 1.0                     ; 4833 MB             ; 00:00:37                           ;
-; Fitter               ; 00:00:39     ; 1.1                     ; 5831 MB             ; 00:00:47                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4677 MB             ; 00:00:05                           ;
-; Total                ; 00:01:08     ; --                      ; --                  ; 00:01:29                           ;
+; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 4844 MB             ; 00:00:22                           ;
+; Fitter               ; 00:00:18     ; 1.1                     ; 5775 MB             ; 00:00:26                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4678 MB             ; 00:00:03                           ;
+; Total                ; 00:00:33     ; --                      ; --                  ; 00:00:51                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

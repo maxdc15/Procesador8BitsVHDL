@@ -112,6 +112,7 @@ architecture arc of mem_programa is
 									48	=> JMP,
 									49	=> X"00",		
 
+
 									others	=> x"00");
 									
 	begin

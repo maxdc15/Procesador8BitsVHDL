@@ -52,27 +52,8 @@ set_global_assignment -name EDA_OUTPUT_DATA_FORMAT VHDL -section_id eda_simulati
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VHDL_FILE ../ME_Unidad_Control/ME_Unidad_Control.vhd
-set_global_assignment -name VHDL_FILE ../../Procesador8Bits/memoria/memoria.vhd
-set_global_assignment -name VHDL_FILE ../../Procesador8Bits/puertos_salida/puertos_salida.vhd
-set_global_assignment -name VHDL_FILE ../../Procesador8Bits/mem_programa/mem_programa.vhd
-set_global_assignment -name VHDL_FILE ../../Procesador8Bits/mem_datos/mem_datos.vhd
-set_global_assignment -name VHDL_FILE ../CPU/CPU.vhd
-set_global_assignment -name VHDL_FILE ../Datapath/Cont8Bits/Cont8Bits.vhd
-set_global_assignment -name VHDL_FILE ../Datapath/DataPath8Bits/DataPath8Bits.vhd
-set_global_assignment -name VHDL_FILE ../Datapath/PC/PC.vhd
-set_global_assignment -name VHDL_FILE ../Datapath/Registros/Registros.vhd
-set_global_assignment -name VHDL_FILE ../ALU/ALU8BITS/ALU8BITS.vhd
-set_global_assignment -name VHDL_FILE ../ALU/RESTA8/RESTA8.vhd
-set_global_assignment -name VHDL_FILE ../ALU/SUMA8/SUMA8.vhd
-set_global_assignment -name VHDL_FILE ../ALU/FS/FS.vhd
-set_global_assignment -name VHDL_FILE ../ALU/HS/HS.vhd
-set_global_assignment -name VHDL_FILE ../ALU/FA/FA.vhd
-set_global_assignment -name VHDL_FILE ../ALU/HA/HA.vhd
-set_global_assignment -name VHDL_FILE Procesador.vhd
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
-set_global_assignment -name VECTOR_WAVEFORM_FILE Procesador.vwf
 set_location_assignment PIN_P11 -to CLK
 set_location_assignment PIN_F15 -to RST
 set_location_assignment PIN_D14 -to p_out_00[7]
@@ -91,4 +72,23 @@ set_location_assignment PIN_D12 -to p_in_00[2]
 set_location_assignment PIN_C11 -to p_in_00[1]
 set_location_assignment PIN_C10 -to p_in_00[0]
 set_location_assignment PIN_A8 -to p_out_00[0]
+set_global_assignment -name VHDL_FILE ../Memory/memoria/memoria.vhd
+set_global_assignment -name VHDL_FILE ../Memory/mem_datos/mem_datos.vhd
+set_global_assignment -name VHDL_FILE ../Memory/mem_programa/mem_programa.vhd
+set_global_assignment -name VHDL_FILE ../Memory/puertos_salida/puertos_salida.vhd
+set_global_assignment -name VHDL_FILE ../ME_Unidad_Control/ME_Unidad_Control.vhd
+set_global_assignment -name VHDL_FILE ../CPU/CPU.vhd
+set_global_assignment -name VHDL_FILE ../Datapath/Cont8Bits/Cont8Bits.vhd
+set_global_assignment -name VHDL_FILE ../Datapath/DataPath8Bits/DataPath8Bits.vhd
+set_global_assignment -name VHDL_FILE ../Datapath/PC/PC.vhd
+set_global_assignment -name VHDL_FILE ../Datapath/Registros/Registros.vhd
+set_global_assignment -name VHDL_FILE ../ALU/ALU8BITS/ALU8BITS.vhd
+set_global_assignment -name VHDL_FILE ../ALU/RESTA8/RESTA8.vhd
+set_global_assignment -name VHDL_FILE ../ALU/SUMA8/SUMA8.vhd
+set_global_assignment -name VHDL_FILE ../ALU/FS/FS.vhd
+set_global_assignment -name VHDL_FILE ../ALU/HS/HS.vhd
+set_global_assignment -name VHDL_FILE ../ALU/FA/FA.vhd
+set_global_assignment -name VHDL_FILE ../ALU/HA/HA.vhd
+set_global_assignment -name VHDL_FILE Procesador.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE Procesador.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

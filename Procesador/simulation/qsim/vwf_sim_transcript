@@ -25,7 +25,7 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Wed May 29 09:29:33 2024
+    Info: Processing started: Thu May 30 17:46:09 2024
 Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Procesador -c Procesador --vector_source=C:/TE2003B/Procesador-8-Bits-VHDL/Procesador/Procesador.vwf --testbench_file=C:/TE2003B/Procesador-8-Bits-VHDL/Procesador/simulation/qsim/Procesador.vwf.vht
 Info (119006): Selected device 10M50DAF484C7G for design "Procesador"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -54,14 +54,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Wed May 29 09:29:34 2024
+    Info: Processing started: Thu May 30 17:46:10 2024
 Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory=C:/TE2003B/Procesador-8-Bits-VHDL/Procesador/simulation/qsim/ Procesador -c Procesador
 Info (119006): Selected device 10M50DAF484C7G for design "Procesador"
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (204019): Generated file Procesador.vho in folder "C:/TE2003B/Procesador-8-Bits-VHDL/Procesador/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4643 megabytes
-    Info: Processing ended: Wed May 29 09:29:35 2024
+    Info: Peak virtual memory: 4645 megabytes
+    Info: Processing ended: Thu May 30 17:46:11 2024
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -69,7 +69,7 @@ Completed successfully.
 
 **** Generating the ModelSim .do script ****
 
-C:/TE2003B/Procesador-8-Bits-VHDL/Procesador/simulation/qsim/Procesador.do generated.
+C:/TE2003B/Procesador8BitsVHDL/Procesador/simulation/qsim/Procesador.do generated.
 
 Completed successfully. 
 
@@ -83,14 +83,11 @@ Reading C:/intelFPGA/18.0/modelsim_ase/tcl/vsim/pref.tcl
 
 
 # do Procesador.do
-
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:29:37 on May 29,2024
+# Start time: 17:46:11 on May 30,2024
 # vcom -work work Procesador.vho 
-
 # -- Loading package STANDARD
-
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Loading package VITAL_Timing
@@ -102,23 +99,22 @@ Reading C:/intelFPGA/18.0/modelsim_ase/tcl/vsim/pref.tcl
 # -- Compiling entity Procesador
 # -- Compiling architecture structure of Procesador
 
-# End time: 09:29:37 on May 29,2024, Elapsed time: 0:00:00
+# End time: 17:46:12 on May 30,2024, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 09:29:37 on May 29,2024
+# Start time: 17:46:12 on May 30,2024
 # vcom -work work Procesador.vwf.vht 
 # -- Loading package STANDARD
+
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Procesador_vhd_vec_tst
 # -- Compiling architecture Procesador_arch of Procesador_vhd_vec_tst
-
-# End time: 09:29:37 on May 29,2024, Elapsed time: 0:00:00
+# End time: 17:46:12 on May 30,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L fiftyfivenm -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.Procesador_vhd_vec_tst 
-# Start time: 09:29:38 on May 29,2024
+# Start time: 17:46:12 on May 30,2024
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -138,76 +134,68 @@ Reading C:/intelFPGA/18.0/modelsim_ase/tcl/vsim/pref.tcl
 # Expect performance to be adversely affected.
 # after#33
 
-# Simulation time: 20500 ps
+# Simulation time: 22000 ps
 
-# Simulation time: 20500 ps
+# Simulation time: 22000 ps
 
-# Simulation time: 20500 ps
+# Simulation time: 22000 ps
 
-# Simulation time: 20500 ps
+# Simulation time: 22000 ps
 
-# Simulation time: 20500 ps
+# Simulation time: 22000 ps
 
-# Simulation time: 20500 ps
+# Simulation time: 22000 ps
 
-# Simulation time: 20500 ps
+# Simulation time: 22000 ps
 
-# Simulation time: 20500 ps
+# Simulation time: 22000 ps
 
-# Simulation time: 280000 ps
+# Simulation time: 338250 ps
 
-# Simulation time: 280000 ps
+# Simulation time: 338250 ps
 
-# Simulation time: 280000 ps
+# Simulation time: 338250 ps
 
-# Simulation time: 280000 ps
+# Simulation time: 338250 ps
 
-# Simulation time: 280000 ps
+# Simulation time: 338250 ps
 
-# Simulation time: 280000 ps
+# Simulation time: 338250 ps
 
-# Simulation time: 280000 ps
+# Simulation time: 338250 ps
 
-# Simulation time: 280000 ps
+# Simulation time: 338250 ps
 
-# Simulation time: 544250 ps
+# Simulation time: 634750 ps
 
-# Simulation time: 544250 ps
+# Simulation time: 634750 ps
 
-# Simulation time: 544250 ps
+# Simulation time: 634750 ps
 
-# Simulation time: 544250 ps
+# Simulation time: 634750 ps
 
-# Simulation time: 544250 ps
+# Simulation time: 634750 ps
 
-# Simulation time: 544250 ps
+# Simulation time: 634750 ps
 
-# Simulation time: 544250 ps
+# Simulation time: 634750 ps
 
-# Simulation time: 544250 ps
+# Simulation time: 634750 ps
 
-# Simulation time: 785250 ps
-
-# Simulation time: 785250 ps
-
-# Simulation time: 785250 ps
-
-# Simulation time: 785250 ps
-
-# End time: 09:30:51 on May 29,2024, Elapsed time: 0:01:13
+# End time: 17:47:15 on May 30,2024, Elapsed time: 0:01:03
 # Errors: 0, Warnings: 1
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/TE2003B/Procesador-8-Bits-VHDL/Procesador/Procesador.vwf...
+Reading C:/TE2003B/Procesador8BitsVHDL/Procesador/Procesador.vwf...
 
-Reading C:/TE2003B/Procesador-8-Bits-VHDL/Procesador/simulation/qsim/Procesador.msim.vcd...
+Reading C:/TE2003B/Procesador8BitsVHDL/Procesador/simulation/qsim/Procesador.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/TE2003B/Procesador-8-Bits-VHDL/Procesador/simulation/qsim/Procesador_20240529093051.sim.vwf
+Writing the resulting VWF to C:/TE2003B/Procesador8BitsVHDL/Procesador/simulation/qsim/Procesador_20240530174715.sim.vwf
 
 Finished VCD to VWF conversion.
 

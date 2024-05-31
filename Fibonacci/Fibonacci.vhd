@@ -24,7 +24,7 @@ architecture RTL of Fibonacci is
 	-- Componentes utilizados
 	
 		-- Divisor de frecuencia
-		component Cont24Bits is
+		component Cont24Bits is	-- Realmente de 16 bits
 			port (
 					CLK, RST : in std_logic;	-- Entradas
 					OVER : out std_logic			-- Salidas

@@ -65,7 +65,7 @@ R4
 R5
 R6
 Z19 DPx6 altera 28 altera_primitives_components 0 22 _LNC5n6B?5VN@W;M4Dg@k1
-R0
+Z20 dC:/TE2003B/Procesador8BitsVHDL/Procesador/simulation/qsim
 R8
 R9
 l0
@@ -74,9 +74,9 @@ VL2GGShHJkaVLdcF60ES<E0
 !s100 8<E5QcK2aE1Se1AB[KB^@3
 R10
 32
-Z20 !s110 1716996577
+Z21 !s110 1717112771
 !i10b 1
-Z21 !s108 1716996577.000000
+Z22 !s108 1717112771.000000
 R13
 R14
 !i113 1
@@ -98,50 +98,50 @@ VogXN9HES75GaUAN2RaeI51
 !s100 RzV218Y[cIWUg0D]S2AVX1
 R10
 32
-R20
-!i10b 1
 R21
+!i10b 1
+R22
 R13
 R14
 !i113 1
 R15
 R16
 Eprocesador_vhd_vec_tst
-Z22 w1716996574
+Z23 w1716996574
 R5
 R6
-R0
-Z23 8Procesador.vwf.vht
-Z24 FProcesador.vwf.vht
+R20
+Z24 8Procesador.vwf.vht
+Z25 FProcesador.vwf.vht
 l0
 L31
 VJ^B5Yg^MdWTi9_nNUe6S02
 !s100 ?d;:G7@oel42C^GKMCF`@2
 R10
 32
-R20
+Z26 !s110 1717112772
 !i10b 1
-R21
-Z25 !s90 -work|work|Procesador.vwf.vht|
-Z26 !s107 Procesador.vwf.vht|
+Z27 !s108 1717112772.000000
+Z28 !s90 -work|work|Procesador.vwf.vht|
+Z29 !s107 Procesador.vwf.vht|
 !i113 1
 R15
 R16
 Aprocesador_arch
 R5
 R6
-Z27 DEx4 work 22 procesador_vhd_vec_tst 0 22 J^B5Yg^MdWTi9_nNUe6S02
+Z30 DEx4 work 22 procesador_vhd_vec_tst 0 22 J^B5Yg^MdWTi9_nNUe6S02
 l108
 L33
-Z28 V>4YQOfk0a[0gVZ_9ea=a>0
-Z29 !s100 b5GzGCcEe86^09YdI3I:H0
+Z31 V>4YQOfk0a[0gVZ_9ea=a>0
+Z32 !s100 b5GzGCcEe86^09YdI3I:H0
 R10
 32
-R20
-!i10b 1
-R21
-R25
 R26
+!i10b 1
+R27
+R28
+R29
 !i113 1
 R15
 R16

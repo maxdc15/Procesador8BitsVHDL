@@ -3,7 +3,7 @@ $comment
 		vcd file Procesador.msim.vcd -direction
 $end
 $date
-	Wed May 29 09:29:39 2024
+	Thu May 30 17:46:13 2024
 $end
 $version
 	ModelSim Version 10.5b

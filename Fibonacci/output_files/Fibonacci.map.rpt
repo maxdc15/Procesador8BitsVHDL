@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Fibonacci
-Thu May 30 14:09:40 2024
+Thu May 30 18:00:38 2024
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -65,7 +65,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 30 14:09:40 2024       ;
+; Analysis & Synthesis Status        ; Successful - Thu May 30 18:00:37 2024       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; Fibonacci                                   ;
 ; Top-level Entity Name              ; Fibonacci                                   ;
@@ -188,47 +188,47 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                            ;
-+-------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                                ; Library ;
-+-------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------+---------+
-; ../Divisor/Cont24Bits/Cont24Bits.vhd            ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/Divisor/Cont24Bits/Cont24Bits.vhd                         ;         ;
-; ../Divisor/SumaUno24Bits/SumaUno24Bits.vhd      ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/Divisor/SumaUno24Bits/SumaUno24Bits.vhd                   ;         ;
-; ../Procesador/Procesador.vhd                    ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/Procesador/Procesador.vhd                                 ;         ;
-; ../Memory/memoria/memoria.vhd                   ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/Memory/memoria/memoria.vhd                                ;         ;
-; ../Memory/mem_programa/mem_programa.vhd         ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/Memory/mem_programa/mem_programa.vhd                      ;         ;
-; ../Memory/mem_datos/mem_datos.vhd               ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/Memory/mem_datos/mem_datos.vhd                            ;         ;
-; ../Memory/puertos_salida/puertos_salida.vhd     ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/Memory/puertos_salida/puertos_salida.vhd                  ;         ;
-; ../ME_Unidad_Control/ME_Unidad_Control.vhd      ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd                   ;         ;
-; ../FiboCoder/FiboCoder.vhd                      ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/FiboCoder/FiboCoder.vhd                                   ;         ;
-; ../CPU/CPU.vhd                                  ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/CPU/CPU.vhd                                               ;         ;
-; ../Datapath/Cont8Bits/Cont8Bits.vhd             ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/Cont8Bits/Cont8Bits.vhd                          ;         ;
-; ../Datapath/DataPath8Bits/DataPath8Bits.vhd     ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd                  ;         ;
-; ../Datapath/PC/PC.vhd                           ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/PC/PC.vhd                                        ;         ;
-; ../Datapath/Registros/Registros.vhd             ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/Registros/Registros.vhd                          ;         ;
-; ../ALU/ALU8BITS/ALU8BITS.vhd                    ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd                                 ;         ;
-; ../ALU/FA/FA.vhd                                ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/ALU/FA/FA.vhd                                             ;         ;
-; ../ALU/FS/FS.vhd                                ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/ALU/FS/FS.vhd                                             ;         ;
-; ../ALU/HA/HA.vhd                                ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/ALU/HA/HA.vhd                                             ;         ;
-; ../ALU/HS/HS.vhd                                ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/ALU/HS/HS.vhd                                             ;         ;
-; ../ALU/RESTA8/RESTA8.vhd                        ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/ALU/RESTA8/RESTA8.vhd                                     ;         ;
-; ../ALU/SUMA8/SUMA8.vhd                          ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/ALU/SUMA8/SUMA8.vhd                                       ;         ;
-; Fibonacci.vhd                                   ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador-8-Bits-VHDL/Fibonacci/Fibonacci.vhd                                   ;         ;
-; altsyncram.tdf                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf                       ;         ;
-; stratix_ram_block.inc                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratix_ram_block.inc                ;         ;
-; lpm_mux.inc                                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mux.inc                          ;         ;
-; lpm_decode.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_decode.inc                       ;         ;
-; aglobal180.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/aglobal180.inc                       ;         ;
-; a_rdenreg.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/a_rdenreg.inc                        ;         ;
-; altrom.inc                                      ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altrom.inc                           ;         ;
-; altram.inc                                      ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altram.inc                           ;         ;
-; altdpram.inc                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altdpram.inc                         ;         ;
-; db/altsyncram_euh1.tdf                          ; yes             ; Auto-Generated Megafunction                           ; C:/TE2003B/Procesador-8-Bits-VHDL/Fibonacci/db/altsyncram_euh1.tdf                          ;         ;
-; db/fibonacci.ram0_mem_datos_b0539313.hdl.mif    ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/TE2003B/Procesador-8-Bits-VHDL/Fibonacci/db/fibonacci.ram0_mem_datos_b0539313.hdl.mif    ;         ;
-; db/altsyncram_2v61.tdf                          ; yes             ; Auto-Generated Megafunction                           ; C:/TE2003B/Procesador-8-Bits-VHDL/Fibonacci/db/altsyncram_2v61.tdf                          ;         ;
-; db/fibonacci.ram0_mem_programa_f34e33f6.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/TE2003B/Procesador-8-Bits-VHDL/Fibonacci/db/fibonacci.ram0_mem_programa_f34e33f6.hdl.mif ;         ;
-+-------------------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                         ;
++-------------------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                             ; Library ;
++-------------------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------+---------+
+; ../Divisor/Cont24Bits/Cont24Bits.vhd            ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/Divisor/Cont24Bits/Cont24Bits.vhd                         ;         ;
+; ../Divisor/SumaUno24Bits/SumaUno24Bits.vhd      ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/Divisor/SumaUno24Bits/SumaUno24Bits.vhd                   ;         ;
+; ../Procesador/Procesador.vhd                    ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/Procesador/Procesador.vhd                                 ;         ;
+; ../Memory/memoria/memoria.vhd                   ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/Memory/memoria/memoria.vhd                                ;         ;
+; ../Memory/mem_programa/mem_programa.vhd         ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/Memory/mem_programa/mem_programa.vhd                      ;         ;
+; ../Memory/mem_datos/mem_datos.vhd               ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/Memory/mem_datos/mem_datos.vhd                            ;         ;
+; ../Memory/puertos_salida/puertos_salida.vhd     ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/Memory/puertos_salida/puertos_salida.vhd                  ;         ;
+; ../ME_Unidad_Control/ME_Unidad_Control.vhd      ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd                   ;         ;
+; ../FiboCoder/FiboCoder.vhd                      ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/FiboCoder/FiboCoder.vhd                                   ;         ;
+; ../CPU/CPU.vhd                                  ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/CPU/CPU.vhd                                               ;         ;
+; ../Datapath/Cont8Bits/Cont8Bits.vhd             ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/Datapath/Cont8Bits/Cont8Bits.vhd                          ;         ;
+; ../Datapath/DataPath8Bits/DataPath8Bits.vhd     ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd                  ;         ;
+; ../Datapath/PC/PC.vhd                           ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/Datapath/PC/PC.vhd                                        ;         ;
+; ../Datapath/Registros/Registros.vhd             ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/Datapath/Registros/Registros.vhd                          ;         ;
+; ../ALU/ALU8BITS/ALU8BITS.vhd                    ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd                                 ;         ;
+; ../ALU/FA/FA.vhd                                ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/ALU/FA/FA.vhd                                             ;         ;
+; ../ALU/FS/FS.vhd                                ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/ALU/FS/FS.vhd                                             ;         ;
+; ../ALU/HA/HA.vhd                                ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/ALU/HA/HA.vhd                                             ;         ;
+; ../ALU/HS/HS.vhd                                ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/ALU/HS/HS.vhd                                             ;         ;
+; ../ALU/RESTA8/RESTA8.vhd                        ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/ALU/RESTA8/RESTA8.vhd                                     ;         ;
+; ../ALU/SUMA8/SUMA8.vhd                          ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/ALU/SUMA8/SUMA8.vhd                                       ;         ;
+; Fibonacci.vhd                                   ; yes             ; User VHDL File                                        ; C:/TE2003B/Procesador8BitsVHDL/Fibonacci/Fibonacci.vhd                                   ;         ;
+; altsyncram.tdf                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altsyncram.tdf                    ;         ;
+; stratix_ram_block.inc                           ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratix_ram_block.inc             ;         ;
+; lpm_mux.inc                                     ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mux.inc                       ;         ;
+; lpm_decode.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_decode.inc                    ;         ;
+; aglobal180.inc                                  ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/aglobal180.inc                    ;         ;
+; a_rdenreg.inc                                   ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/a_rdenreg.inc                     ;         ;
+; altrom.inc                                      ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altrom.inc                        ;         ;
+; altram.inc                                      ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altram.inc                        ;         ;
+; altdpram.inc                                    ; yes             ; Megafunction                                          ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altdpram.inc                      ;         ;
+; db/altsyncram_euh1.tdf                          ; yes             ; Auto-Generated Megafunction                           ; C:/TE2003B/Procesador8BitsVHDL/Fibonacci/db/altsyncram_euh1.tdf                          ;         ;
+; db/fibonacci.ram0_mem_datos_b0539313.hdl.mif    ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/TE2003B/Procesador8BitsVHDL/Fibonacci/db/fibonacci.ram0_mem_datos_b0539313.hdl.mif    ;         ;
+; db/altsyncram_2v61.tdf                          ; yes             ; Auto-Generated Megafunction                           ; C:/TE2003B/Procesador8BitsVHDL/Fibonacci/db/altsyncram_2v61.tdf                          ;         ;
+; db/Fibonacci.ram0_mem_programa_f34e33f6.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/TE2003B/Procesador8BitsVHDL/Fibonacci/db/Fibonacci.ram0_mem_programa_f34e33f6.hdl.mif ;         ;
++-------------------------------------------------+-----------------+-------------------------------------------------------+------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -830,7 +830,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:04     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -840,156 +840,156 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Thu May 30 14:09:15 2024
+    Info: Processing started: Thu May 30 18:00:25 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Fibonacci -c Fibonacci
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/divisor/cont24bits/cont24bits.vhd
-    Info (12022): Found design unit 1: Cont24Bits-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/Divisor/Cont24Bits/Cont24Bits.vhd Line: 18
-    Info (12023): Found entity 1: Cont24Bits File: C:/TE2003B/Procesador-8-Bits-VHDL/Divisor/Cont24Bits/Cont24Bits.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/divisor/sumauno24bits/sumauno24bits.vhd
-    Info (12022): Found design unit 1: SumaUno24Bits-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/Divisor/SumaUno24Bits/SumaUno24Bits.vhd Line: 19
-    Info (12023): Found entity 1: SumaUno24Bits File: C:/TE2003B/Procesador-8-Bits-VHDL/Divisor/SumaUno24Bits/SumaUno24Bits.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/procesador/procesador.vhd
-    Info (12022): Found design unit 1: Procesador-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/Procesador/Procesador.vhd Line: 28
-    Info (12023): Found entity 1: Procesador File: C:/TE2003B/Procesador-8-Bits-VHDL/Procesador/Procesador.vhd Line: 13
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/memory/memoria/memoria.vhd
-    Info (12022): Found design unit 1: memoria-arc File: C:/TE2003B/Procesador-8-Bits-VHDL/Memory/memoria/memoria.vhd Line: 26
-    Info (12023): Found entity 1: memoria File: C:/TE2003B/Procesador-8-Bits-VHDL/Memory/memoria/memoria.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/memory/mem_programa/mem_programa.vhd
-    Info (12022): Found design unit 1: mem_programa-arc File: C:/TE2003B/Procesador-8-Bits-VHDL/Memory/mem_programa/mem_programa.vhd Line: 19
-    Info (12023): Found entity 1: mem_programa File: C:/TE2003B/Procesador-8-Bits-VHDL/Memory/mem_programa/mem_programa.vhd Line: 12
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/memory/mem_datos/mem_datos.vhd
-    Info (12022): Found design unit 1: mem_datos-arc File: C:/TE2003B/Procesador-8-Bits-VHDL/Memory/mem_datos/mem_datos.vhd Line: 20
-    Info (12023): Found entity 1: mem_datos File: C:/TE2003B/Procesador-8-Bits-VHDL/Memory/mem_datos/mem_datos.vhd Line: 12
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/memory/puertos_salida/puertos_salida.vhd
-    Info (12022): Found design unit 1: puertos_salida-arc File: C:/TE2003B/Procesador-8-Bits-VHDL/Memory/puertos_salida/puertos_salida.vhd Line: 23
-    Info (12023): Found entity 1: puertos_salida File: C:/TE2003B/Procesador-8-Bits-VHDL/Memory/puertos_salida/puertos_salida.vhd Line: 12
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/me_unidad_control/me_unidad_control.vhd
-    Info (12022): Found design unit 1: ME_Unidad_Control-ARC File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 14
-    Info (12023): Found entity 1: ME_Unidad_Control File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 4
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/fibocoder/fibocoder.vhd
-    Info (12022): Found design unit 1: FiboCoder-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/FiboCoder/FiboCoder.vhd Line: 18
-    Info (12023): Found entity 1: FiboCoder File: C:/TE2003B/Procesador-8-Bits-VHDL/FiboCoder/FiboCoder.vhd Line: 10
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/cpu/cpu.vhd
-    Info (12022): Found design unit 1: CPU-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/CPU/CPU.vhd Line: 22
-    Info (12023): Found entity 1: CPU File: C:/TE2003B/Procesador-8-Bits-VHDL/CPU/CPU.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/datapath/cont8bits/cont8bits.vhd
-    Info (12022): Found design unit 1: CONt8Bits-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/Cont8Bits/Cont8Bits.vhd Line: 19
-    Info (12023): Found entity 1: Cont8Bits File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/Cont8Bits/Cont8Bits.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/datapath/datapath8bits/datapath8bits.vhd
-    Info (12022): Found design unit 1: DataPath8Bits-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 24
-    Info (12023): Found entity 1: DataPath8Bits File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/datapath/pc/pc.vhd
-    Info (12022): Found design unit 1: PC-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/PC/PC.vhd Line: 24
-    Info (12023): Found entity 1: PC File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/PC/PC.vhd Line: 12
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/datapath/registros/registros.vhd
-    Info (12022): Found design unit 1: Registros-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/Registros/Registros.vhd Line: 30
-    Info (12023): Found entity 1: Registros File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/Registros/Registros.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/alu/alu8bits/alu8bits.vhd
-    Info (12022): Found design unit 1: ALU8BITS-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 21
-    Info (12023): Found entity 1: ALU8BITS File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/alu/fa/fa.vhd
-    Info (12022): Found design unit 1: FA-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/FA/FA.vhd Line: 19
-    Info (12023): Found entity 1: FA File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/FA/FA.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/alu/fs/fs.vhd
-    Info (12022): Found design unit 1: FS-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/FS/FS.vhd Line: 19
-    Info (12023): Found entity 1: FS File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/FS/FS.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/alu/ha/ha.vhd
-    Info (12022): Found design unit 1: HA-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/HA/HA.vhd Line: 19
-    Info (12023): Found entity 1: HA File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/HA/HA.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/alu/hs/hs.vhd
-    Info (12022): Found design unit 1: HS-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/HS/HS.vhd Line: 19
-    Info (12023): Found entity 1: HS File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/HS/HS.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/alu/resta8/resta8.vhd
-    Info (12022): Found design unit 1: RESTA8-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/RESTA8/RESTA8.vhd Line: 22
-    Info (12023): Found entity 1: RESTA8 File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/RESTA8/RESTA8.vhd Line: 11
-Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador-8-bits-vhdl/alu/suma8/suma8.vhd
-    Info (12022): Found design unit 1: SUMA8-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/SUMA8/SUMA8.vhd Line: 22
-    Info (12023): Found entity 1: SUMA8 File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/SUMA8/SUMA8.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/divisor/cont24bits/cont24bits.vhd
+    Info (12022): Found design unit 1: Cont24Bits-RTL File: C:/TE2003B/Procesador8BitsVHDL/Divisor/Cont24Bits/Cont24Bits.vhd Line: 18
+    Info (12023): Found entity 1: Cont24Bits File: C:/TE2003B/Procesador8BitsVHDL/Divisor/Cont24Bits/Cont24Bits.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/divisor/sumauno24bits/sumauno24bits.vhd
+    Info (12022): Found design unit 1: SumaUno24Bits-RTL File: C:/TE2003B/Procesador8BitsVHDL/Divisor/SumaUno24Bits/SumaUno24Bits.vhd Line: 19
+    Info (12023): Found entity 1: SumaUno24Bits File: C:/TE2003B/Procesador8BitsVHDL/Divisor/SumaUno24Bits/SumaUno24Bits.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/procesador/procesador.vhd
+    Info (12022): Found design unit 1: Procesador-RTL File: C:/TE2003B/Procesador8BitsVHDL/Procesador/Procesador.vhd Line: 28
+    Info (12023): Found entity 1: Procesador File: C:/TE2003B/Procesador8BitsVHDL/Procesador/Procesador.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/memory/memoria/memoria.vhd
+    Info (12022): Found design unit 1: memoria-arc File: C:/TE2003B/Procesador8BitsVHDL/Memory/memoria/memoria.vhd Line: 26
+    Info (12023): Found entity 1: memoria File: C:/TE2003B/Procesador8BitsVHDL/Memory/memoria/memoria.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/memory/mem_programa/mem_programa.vhd
+    Info (12022): Found design unit 1: mem_programa-arc File: C:/TE2003B/Procesador8BitsVHDL/Memory/mem_programa/mem_programa.vhd Line: 19
+    Info (12023): Found entity 1: mem_programa File: C:/TE2003B/Procesador8BitsVHDL/Memory/mem_programa/mem_programa.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/memory/mem_datos/mem_datos.vhd
+    Info (12022): Found design unit 1: mem_datos-arc File: C:/TE2003B/Procesador8BitsVHDL/Memory/mem_datos/mem_datos.vhd Line: 20
+    Info (12023): Found entity 1: mem_datos File: C:/TE2003B/Procesador8BitsVHDL/Memory/mem_datos/mem_datos.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/memory/puertos_salida/puertos_salida.vhd
+    Info (12022): Found design unit 1: puertos_salida-arc File: C:/TE2003B/Procesador8BitsVHDL/Memory/puertos_salida/puertos_salida.vhd Line: 23
+    Info (12023): Found entity 1: puertos_salida File: C:/TE2003B/Procesador8BitsVHDL/Memory/puertos_salida/puertos_salida.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/me_unidad_control/me_unidad_control.vhd
+    Info (12022): Found design unit 1: ME_Unidad_Control-ARC File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 14
+    Info (12023): Found entity 1: ME_Unidad_Control File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/fibocoder/fibocoder.vhd
+    Info (12022): Found design unit 1: FiboCoder-RTL File: C:/TE2003B/Procesador8BitsVHDL/FiboCoder/FiboCoder.vhd Line: 18
+    Info (12023): Found entity 1: FiboCoder File: C:/TE2003B/Procesador8BitsVHDL/FiboCoder/FiboCoder.vhd Line: 10
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/cpu/cpu.vhd
+    Info (12022): Found design unit 1: CPU-RTL File: C:/TE2003B/Procesador8BitsVHDL/CPU/CPU.vhd Line: 22
+    Info (12023): Found entity 1: CPU File: C:/TE2003B/Procesador8BitsVHDL/CPU/CPU.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/datapath/cont8bits/cont8bits.vhd
+    Info (12022): Found design unit 1: CONt8Bits-RTL File: C:/TE2003B/Procesador8BitsVHDL/Datapath/Cont8Bits/Cont8Bits.vhd Line: 19
+    Info (12023): Found entity 1: Cont8Bits File: C:/TE2003B/Procesador8BitsVHDL/Datapath/Cont8Bits/Cont8Bits.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/datapath/datapath8bits/datapath8bits.vhd
+    Info (12022): Found design unit 1: DataPath8Bits-RTL File: C:/TE2003B/Procesador8BitsVHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 24
+    Info (12023): Found entity 1: DataPath8Bits File: C:/TE2003B/Procesador8BitsVHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/datapath/pc/pc.vhd
+    Info (12022): Found design unit 1: PC-RTL File: C:/TE2003B/Procesador8BitsVHDL/Datapath/PC/PC.vhd Line: 24
+    Info (12023): Found entity 1: PC File: C:/TE2003B/Procesador8BitsVHDL/Datapath/PC/PC.vhd Line: 12
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/datapath/registros/registros.vhd
+    Info (12022): Found design unit 1: Registros-RTL File: C:/TE2003B/Procesador8BitsVHDL/Datapath/Registros/Registros.vhd Line: 30
+    Info (12023): Found entity 1: Registros File: C:/TE2003B/Procesador8BitsVHDL/Datapath/Registros/Registros.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/alu/alu8bits/alu8bits.vhd
+    Info (12022): Found design unit 1: ALU8BITS-RTL File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 21
+    Info (12023): Found entity 1: ALU8BITS File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/alu/fa/fa.vhd
+    Info (12022): Found design unit 1: FA-RTL File: C:/TE2003B/Procesador8BitsVHDL/ALU/FA/FA.vhd Line: 19
+    Info (12023): Found entity 1: FA File: C:/TE2003B/Procesador8BitsVHDL/ALU/FA/FA.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/alu/fs/fs.vhd
+    Info (12022): Found design unit 1: FS-RTL File: C:/TE2003B/Procesador8BitsVHDL/ALU/FS/FS.vhd Line: 19
+    Info (12023): Found entity 1: FS File: C:/TE2003B/Procesador8BitsVHDL/ALU/FS/FS.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/alu/ha/ha.vhd
+    Info (12022): Found design unit 1: HA-RTL File: C:/TE2003B/Procesador8BitsVHDL/ALU/HA/HA.vhd Line: 19
+    Info (12023): Found entity 1: HA File: C:/TE2003B/Procesador8BitsVHDL/ALU/HA/HA.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/alu/hs/hs.vhd
+    Info (12022): Found design unit 1: HS-RTL File: C:/TE2003B/Procesador8BitsVHDL/ALU/HS/HS.vhd Line: 19
+    Info (12023): Found entity 1: HS File: C:/TE2003B/Procesador8BitsVHDL/ALU/HS/HS.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/alu/resta8/resta8.vhd
+    Info (12022): Found design unit 1: RESTA8-RTL File: C:/TE2003B/Procesador8BitsVHDL/ALU/RESTA8/RESTA8.vhd Line: 22
+    Info (12023): Found entity 1: RESTA8 File: C:/TE2003B/Procesador8BitsVHDL/ALU/RESTA8/RESTA8.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file /te2003b/procesador8bitsvhdl/alu/suma8/suma8.vhd
+    Info (12022): Found design unit 1: SUMA8-RTL File: C:/TE2003B/Procesador8BitsVHDL/ALU/SUMA8/SUMA8.vhd Line: 22
+    Info (12023): Found entity 1: SUMA8 File: C:/TE2003B/Procesador8BitsVHDL/ALU/SUMA8/SUMA8.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file fibonacci.vhd
-    Info (12022): Found design unit 1: Fibonacci-RTL File: C:/TE2003B/Procesador-8-Bits-VHDL/Fibonacci/Fibonacci.vhd Line: 22
-    Info (12023): Found entity 1: Fibonacci File: C:/TE2003B/Procesador-8-Bits-VHDL/Fibonacci/Fibonacci.vhd Line: 10
+    Info (12022): Found design unit 1: Fibonacci-RTL File: C:/TE2003B/Procesador8BitsVHDL/Fibonacci/Fibonacci.vhd Line: 22
+    Info (12023): Found entity 1: Fibonacci File: C:/TE2003B/Procesador8BitsVHDL/Fibonacci/Fibonacci.vhd Line: 10
 Info (12127): Elaborating entity "Fibonacci" for the top level hierarchy
-Info (12128): Elaborating entity "Cont24Bits" for hierarchy "Cont24Bits:DivFrec" File: C:/TE2003B/Procesador-8-Bits-VHDL/Fibonacci/Fibonacci.vhd Line: 65
-Info (12128): Elaborating entity "SumaUno24Bits" for hierarchy "Cont24Bits:DivFrec|SumaUno24Bits:I0" File: C:/TE2003B/Procesador-8-Bits-VHDL/Divisor/Cont24Bits/Cont24Bits.vhd Line: 43
-Info (12128): Elaborating entity "HA" for hierarchy "Cont24Bits:DivFrec|SumaUno24Bits:I0|HA:I0" File: C:/TE2003B/Procesador-8-Bits-VHDL/Divisor/SumaUno24Bits/SumaUno24Bits.vhd Line: 40
-Info (12128): Elaborating entity "Procesador" for hierarchy "Procesador:Pros" File: C:/TE2003B/Procesador-8-Bits-VHDL/Fibonacci/Fibonacci.vhd Line: 66
-Info (12128): Elaborating entity "CPU" for hierarchy "Procesador:Pros|CPU:CPU0" File: C:/TE2003B/Procesador-8-Bits-VHDL/Procesador/Procesador.vhd Line: 65
-Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(56): object "BUS1" assigned a value but never read File: C:/TE2003B/Procesador-8-Bits-VHDL/CPU/CPU.vhd Line: 56
-Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(56): object "BUS2" assigned a value but never read File: C:/TE2003B/Procesador-8-Bits-VHDL/CPU/CPU.vhd Line: 56
-Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(56): object "PC" assigned a value but never read File: C:/TE2003B/Procesador-8-Bits-VHDL/CPU/CPU.vhd Line: 56
-Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(56): object "A" assigned a value but never read File: C:/TE2003B/Procesador-8-Bits-VHDL/CPU/CPU.vhd Line: 56
-Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(56): object "B" assigned a value but never read File: C:/TE2003B/Procesador-8-Bits-VHDL/CPU/CPU.vhd Line: 56
-Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(57): object "Flags" assigned a value but never read File: C:/TE2003B/Procesador-8-Bits-VHDL/CPU/CPU.vhd Line: 57
-Info (12128): Elaborating entity "ME_Unidad_Control" for hierarchy "Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1" File: C:/TE2003B/Procesador-8-Bits-VHDL/CPU/CPU.vhd Line: 62
-Warning (10492): VHDL Process Statement warning at ME_Unidad_Control.vhd(27): signal "RST" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 27
-Warning (10492): VHDL Process Statement warning at ME_Unidad_Control.vhd(41): signal "Start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 41
-Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "IR_Load", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "MAR_Load", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "PC_Load", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "PC_Inc", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "A_Load", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "B_Load", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "CCR_Load", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "Bus2_Sel", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "Bus1_Sel", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "ALU_Select", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "wr", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "wr" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "ALU_Select[0]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "ALU_Select[1]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "ALU_Select[2]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "ALU_Select[3]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "ALU_Select[4]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "ALU_Select[5]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "ALU_Select[6]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "ALU_Select[7]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "Bus1_Sel[0]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "Bus1_Sel[1]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "Bus2_Sel[0]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "Bus2_Sel[1]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "CCR_Load" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "B_Load" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "A_Load" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "PC_Inc" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "PC_Load" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "MAR_Load" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (10041): Inferred latch for "IR_Load" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Info (12128): Elaborating entity "DataPath8Bits" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2" File: C:/TE2003B/Procesador-8-Bits-VHDL/CPU/CPU.vhd Line: 63
-Info (12128): Elaborating entity "Registros" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|Registros:C1" File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 75
-Info (12128): Elaborating entity "ALU8BITS" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|ALU8BITS:C2" File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 76
-Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(93): signal "Carry" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 93
-Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(95): signal "CoIncA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 95
-Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(97): signal "CoIncB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 97
-Warning (10631): VHDL Process Statement warning at ALU8BITS.vhd(88): inferring latch(es) for signal or variable "Flags", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 88
-Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(109): signal "OverAaddB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 109
-Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(111): signal "OverAsubB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 111
-Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(113): signal "OverIncA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 113
-Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(115): signal "OverIncB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 115
-Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(117): signal "OverDecA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 117
-Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(119): signal "OverDecB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 119
-Warning (10631): VHDL Process Statement warning at ALU8BITS.vhd(104): inferring latch(es) for signal or variable "Flags", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 104
-Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(133): signal "Borrow" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 133
-Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(135): signal "BoDecA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 135
-Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(137): signal "BoDecB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 137
-Warning (10631): VHDL Process Statement warning at ALU8BITS.vhd(128): inferring latch(es) for signal or variable "Flags", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 128
-Info (10041): Inferred latch for "Flags[3]" at ALU8BITS.vhd(128) File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 128
-Info (10041): Inferred latch for "Flags[1]" at ALU8BITS.vhd(104) File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 104
-Info (10041): Inferred latch for "Flags[0]" at ALU8BITS.vhd(88) File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 88
-Info (12128): Elaborating entity "SUMA8" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|ALU8BITS:C2|SUMA8:I0" File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 57
-Info (12128): Elaborating entity "FA" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|ALU8BITS:C2|SUMA8:I0|FA:FA0" File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/SUMA8/SUMA8.vhd Line: 38
-Info (12128): Elaborating entity "RESTA8" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|ALU8BITS:C2|RESTA8:I1" File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 58
-Info (12128): Elaborating entity "FS" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|ALU8BITS:C2|RESTA8:I1|FS:FS0" File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/RESTA8/RESTA8.vhd Line: 39
-Info (12128): Elaborating entity "HS" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|ALU8BITS:C2|RESTA8:I1|FS:FS0|HS:HS0" File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/FS/FS.vhd Line: 34
-Info (12128): Elaborating entity "PC" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|PC:C3" File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 77
-Warning (10036): Verilog HDL or VHDL warning at PC.vhd(38): object "inc_signal" assigned a value but never read File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/PC/PC.vhd Line: 38
-Info (12128): Elaborating entity "Cont8Bits" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|PC:C3|Cont8Bits:Contador" File: C:/TE2003B/Procesador-8-Bits-VHDL/Datapath/PC/PC.vhd Line: 53
-Info (12128): Elaborating entity "memoria" for hierarchy "Procesador:Pros|memoria:MEM0" File: C:/TE2003B/Procesador-8-Bits-VHDL/Procesador/Procesador.vhd Line: 66
-Info (12128): Elaborating entity "mem_programa" for hierarchy "Procesador:Pros|memoria:MEM0|mem_programa:mem_prog" File: C:/TE2003B/Procesador-8-Bits-VHDL/Memory/memoria/memoria.vhd Line: 68
-Info (12128): Elaborating entity "mem_datos" for hierarchy "Procesador:Pros|memoria:MEM0|mem_datos:mem_dato" File: C:/TE2003B/Procesador-8-Bits-VHDL/Memory/memoria/memoria.vhd Line: 69
-Info (12128): Elaborating entity "puertos_salida" for hierarchy "Procesador:Pros|memoria:MEM0|puertos_salida:puertos" File: C:/TE2003B/Procesador-8-Bits-VHDL/Memory/memoria/memoria.vhd Line: 70
-Info (12128): Elaborating entity "FiboCoder" for hierarchy "FiboCoder:Coder" File: C:/TE2003B/Procesador-8-Bits-VHDL/Fibonacci/Fibonacci.vhd Line: 69
+Info (12128): Elaborating entity "Cont24Bits" for hierarchy "Cont24Bits:DivFrec" File: C:/TE2003B/Procesador8BitsVHDL/Fibonacci/Fibonacci.vhd Line: 65
+Info (12128): Elaborating entity "SumaUno24Bits" for hierarchy "Cont24Bits:DivFrec|SumaUno24Bits:I0" File: C:/TE2003B/Procesador8BitsVHDL/Divisor/Cont24Bits/Cont24Bits.vhd Line: 43
+Info (12128): Elaborating entity "HA" for hierarchy "Cont24Bits:DivFrec|SumaUno24Bits:I0|HA:I0" File: C:/TE2003B/Procesador8BitsVHDL/Divisor/SumaUno24Bits/SumaUno24Bits.vhd Line: 40
+Info (12128): Elaborating entity "Procesador" for hierarchy "Procesador:Pros" File: C:/TE2003B/Procesador8BitsVHDL/Fibonacci/Fibonacci.vhd Line: 66
+Info (12128): Elaborating entity "CPU" for hierarchy "Procesador:Pros|CPU:CPU0" File: C:/TE2003B/Procesador8BitsVHDL/Procesador/Procesador.vhd Line: 65
+Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(56): object "BUS1" assigned a value but never read File: C:/TE2003B/Procesador8BitsVHDL/CPU/CPU.vhd Line: 56
+Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(56): object "BUS2" assigned a value but never read File: C:/TE2003B/Procesador8BitsVHDL/CPU/CPU.vhd Line: 56
+Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(56): object "PC" assigned a value but never read File: C:/TE2003B/Procesador8BitsVHDL/CPU/CPU.vhd Line: 56
+Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(56): object "A" assigned a value but never read File: C:/TE2003B/Procesador8BitsVHDL/CPU/CPU.vhd Line: 56
+Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(56): object "B" assigned a value but never read File: C:/TE2003B/Procesador8BitsVHDL/CPU/CPU.vhd Line: 56
+Warning (10036): Verilog HDL or VHDL warning at CPU.vhd(57): object "Flags" assigned a value but never read File: C:/TE2003B/Procesador8BitsVHDL/CPU/CPU.vhd Line: 57
+Info (12128): Elaborating entity "ME_Unidad_Control" for hierarchy "Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1" File: C:/TE2003B/Procesador8BitsVHDL/CPU/CPU.vhd Line: 62
+Warning (10492): VHDL Process Statement warning at ME_Unidad_Control.vhd(27): signal "RST" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 27
+Warning (10492): VHDL Process Statement warning at ME_Unidad_Control.vhd(41): signal "Start" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 41
+Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "IR_Load", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "MAR_Load", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "PC_Load", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "PC_Inc", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "A_Load", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "B_Load", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "CCR_Load", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "Bus2_Sel", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "Bus1_Sel", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "ALU_Select", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Warning (10631): VHDL Process Statement warning at ME_Unidad_Control.vhd(307): inferring latch(es) for signal or variable "wr", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "wr" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "ALU_Select[0]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "ALU_Select[1]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "ALU_Select[2]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "ALU_Select[3]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "ALU_Select[4]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "ALU_Select[5]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "ALU_Select[6]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "ALU_Select[7]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "Bus1_Sel[0]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "Bus1_Sel[1]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "Bus2_Sel[0]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "Bus2_Sel[1]" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "CCR_Load" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "B_Load" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "A_Load" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "PC_Inc" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "PC_Load" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "MAR_Load" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (10041): Inferred latch for "IR_Load" at ME_Unidad_Control.vhd(307) File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Info (12128): Elaborating entity "DataPath8Bits" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2" File: C:/TE2003B/Procesador8BitsVHDL/CPU/CPU.vhd Line: 63
+Info (12128): Elaborating entity "Registros" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|Registros:C1" File: C:/TE2003B/Procesador8BitsVHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 75
+Info (12128): Elaborating entity "ALU8BITS" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|ALU8BITS:C2" File: C:/TE2003B/Procesador8BitsVHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 76
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(93): signal "Carry" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 93
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(95): signal "CoIncA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 95
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(97): signal "CoIncB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 97
+Warning (10631): VHDL Process Statement warning at ALU8BITS.vhd(88): inferring latch(es) for signal or variable "Flags", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 88
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(109): signal "OverAaddB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 109
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(111): signal "OverAsubB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 111
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(113): signal "OverIncA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 113
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(115): signal "OverIncB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 115
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(117): signal "OverDecA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 117
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(119): signal "OverDecB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 119
+Warning (10631): VHDL Process Statement warning at ALU8BITS.vhd(104): inferring latch(es) for signal or variable "Flags", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 104
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(133): signal "Borrow" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 133
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(135): signal "BoDecA" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 135
+Warning (10492): VHDL Process Statement warning at ALU8BITS.vhd(137): signal "BoDecB" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 137
+Warning (10631): VHDL Process Statement warning at ALU8BITS.vhd(128): inferring latch(es) for signal or variable "Flags", which holds its previous value in one or more paths through the process File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 128
+Info (10041): Inferred latch for "Flags[3]" at ALU8BITS.vhd(128) File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 128
+Info (10041): Inferred latch for "Flags[1]" at ALU8BITS.vhd(104) File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 104
+Info (10041): Inferred latch for "Flags[0]" at ALU8BITS.vhd(88) File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 88
+Info (12128): Elaborating entity "SUMA8" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|ALU8BITS:C2|SUMA8:I0" File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 57
+Info (12128): Elaborating entity "FA" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|ALU8BITS:C2|SUMA8:I0|FA:FA0" File: C:/TE2003B/Procesador8BitsVHDL/ALU/SUMA8/SUMA8.vhd Line: 38
+Info (12128): Elaborating entity "RESTA8" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|ALU8BITS:C2|RESTA8:I1" File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 58
+Info (12128): Elaborating entity "FS" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|ALU8BITS:C2|RESTA8:I1|FS:FS0" File: C:/TE2003B/Procesador8BitsVHDL/ALU/RESTA8/RESTA8.vhd Line: 39
+Info (12128): Elaborating entity "HS" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|ALU8BITS:C2|RESTA8:I1|FS:FS0|HS:HS0" File: C:/TE2003B/Procesador8BitsVHDL/ALU/FS/FS.vhd Line: 34
+Info (12128): Elaborating entity "PC" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|PC:C3" File: C:/TE2003B/Procesador8BitsVHDL/Datapath/DataPath8Bits/DataPath8Bits.vhd Line: 77
+Warning (10036): Verilog HDL or VHDL warning at PC.vhd(38): object "inc_signal" assigned a value but never read File: C:/TE2003B/Procesador8BitsVHDL/Datapath/PC/PC.vhd Line: 38
+Info (12128): Elaborating entity "Cont8Bits" for hierarchy "Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|PC:C3|Cont8Bits:Contador" File: C:/TE2003B/Procesador8BitsVHDL/Datapath/PC/PC.vhd Line: 53
+Info (12128): Elaborating entity "memoria" for hierarchy "Procesador:Pros|memoria:MEM0" File: C:/TE2003B/Procesador8BitsVHDL/Procesador/Procesador.vhd Line: 66
+Info (12128): Elaborating entity "mem_programa" for hierarchy "Procesador:Pros|memoria:MEM0|mem_programa:mem_prog" File: C:/TE2003B/Procesador8BitsVHDL/Memory/memoria/memoria.vhd Line: 68
+Info (12128): Elaborating entity "mem_datos" for hierarchy "Procesador:Pros|memoria:MEM0|mem_datos:mem_dato" File: C:/TE2003B/Procesador8BitsVHDL/Memory/memoria/memoria.vhd Line: 69
+Info (12128): Elaborating entity "puertos_salida" for hierarchy "Procesador:Pros|memoria:MEM0|puertos_salida:puertos" File: C:/TE2003B/Procesador8BitsVHDL/Memory/memoria/memoria.vhd Line: 70
+Info (12128): Elaborating entity "FiboCoder" for hierarchy "FiboCoder:Coder" File: C:/TE2003B/Procesador8BitsVHDL/Fibonacci/Fibonacci.vhd Line: 69
 Warning (276027): Inferred dual-clock RAM node "Procesador:Pros|memoria:MEM0|mem_datos:mem_dato|RAM_rtl_0" from synchronous design logic.  The read-during-write behavior of a dual-clock RAM is undefined and may not match the behavior of the original design.
 Info (19000): Inferred 2 megafunctions from design logic
     Info (276029): Inferred altsyncram megafunction from the following design logic: "Procesador:Pros|memoria:MEM0|mem_datos:mem_dato|RAM_rtl_0" 
@@ -1037,7 +1037,7 @@ Info (12133): Instantiated megafunction "Procesador:Pros|memoria:MEM0|mem_datos:
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "db/Fibonacci.ram0_mem_datos_b0539313.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_euh1.tdf
-    Info (12023): Found entity 1: altsyncram_euh1 File: C:/TE2003B/Procesador-8-Bits-VHDL/Fibonacci/db/altsyncram_euh1.tdf Line: 27
+    Info (12023): Found entity 1: altsyncram_euh1 File: C:/TE2003B/Procesador8BitsVHDL/Fibonacci/db/altsyncram_euh1.tdf Line: 27
 Info (12130): Elaborated megafunction instantiation "Procesador:Pros|memoria:MEM0|mem_programa:mem_prog|altsyncram:ROM_rtl_0"
 Info (12133): Instantiated megafunction "Procesador:Pros|memoria:MEM0|mem_programa:mem_prog|altsyncram:ROM_rtl_0" with the following parameter:
     Info (12134): Parameter "OPERATION_MODE" = "ROM"
@@ -1051,25 +1051,25 @@ Info (12133): Instantiated megafunction "Procesador:Pros|memoria:MEM0|mem_progra
     Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
     Info (12134): Parameter "INIT_FILE" = "db/Fibonacci.ram0_mem_programa_f34e33f6.hdl.mif"
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_2v61.tdf
-    Info (12023): Found entity 1: altsyncram_2v61 File: C:/TE2003B/Procesador-8-Bits-VHDL/Fibonacci/db/altsyncram_2v61.tdf Line: 27
-Warning (13012): Latch Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[6] has unsafe behavior File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|EDO.ADD_AB File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 21
-Warning (13012): Latch Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[4] has unsafe behavior File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|EDO.NOT_A File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 21
-Warning (13012): Latch Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[2] has unsafe behavior File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|EDO.XOR_AB File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 21
-Warning (13012): Latch Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[1] has unsafe behavior File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|EDO.AND_AB File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 21
-Warning (13012): Latch Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[0] has unsafe behavior File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|EDO.SUB_AB File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 21
-Warning (13012): Latch Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[3] has unsafe behavior File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|EDO.DEC_B File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 21
-Warning (13012): Latch Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|ALU8BITS:C2|Flags[3] has unsafe behavior File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 128
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[6] File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[6] File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-Warning (13012): Latch Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|ALU8BITS:C2|Flags[1] has unsafe behavior File: C:/TE2003B/Procesador-8-Bits-VHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 104
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[6] File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
-    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[6] File: C:/TE2003B/Procesador-8-Bits-VHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+    Info (12023): Found entity 1: altsyncram_2v61 File: C:/TE2003B/Procesador8BitsVHDL/Fibonacci/db/altsyncram_2v61.tdf Line: 27
+Warning (13012): Latch Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[6] has unsafe behavior File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|EDO.ADD_AB File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 21
+Warning (13012): Latch Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[4] has unsafe behavior File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|EDO.NOT_A File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 21
+Warning (13012): Latch Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[2] has unsafe behavior File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|EDO.XOR_AB File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 21
+Warning (13012): Latch Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[1] has unsafe behavior File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|EDO.AND_AB File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 21
+Warning (13012): Latch Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[0] has unsafe behavior File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|EDO.SUB_AB File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 21
+Warning (13012): Latch Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[3] has unsafe behavior File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|EDO.DEC_B File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 21
+Warning (13012): Latch Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|ALU8BITS:C2|Flags[3] has unsafe behavior File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 128
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[6] File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[6] File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+Warning (13012): Latch Procesador:Pros|CPU:CPU0|DataPath8Bits:C2|ALU8BITS:C2|Flags[1] has unsafe behavior File: C:/TE2003B/Procesador8BitsVHDL/ALU/ALU8BITS/ALU8BITS.vhd Line: 104
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[6] File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
+    Warning (13013): Ports ENA and CLR on the latch are fed by the same signal Procesador:Pros|CPU:CPU0|ME_Unidad_Control:C1|ALU_Select[6] File: C:/TE2003B/Procesador8BitsVHDL/ME_Unidad_Control/ME_Unidad_Control.vhd Line: 307
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1079,9 +1079,9 @@ Info (21057): Implemented 710 device resources after synthesis - the final resou
     Info (21061): Implemented 550 logic cells
     Info (21064): Implemented 16 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 55 warnings
-    Info: Peak virtual memory: 4833 megabytes
-    Info: Processing ended: Thu May 30 14:09:40 2024
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:38
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Thu May 30 18:00:38 2024
+    Info: Elapsed time: 00:00:13
+    Info: Total CPU time (on all processors): 00:00:22
 
 
